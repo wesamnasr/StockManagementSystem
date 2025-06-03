@@ -28,16 +28,20 @@ namespace StockManagementSystem
         public CustomerBillForm()
         {
             InitializeComponent();
-            this.Size = new Size(800, 600);
-            this.Dock = DockStyle.Fill; // Set the control to fill the parent 
-            this.MaximumSize = new Size(800, 600); // Set the maximum size to 800x600
-            this.MinimumSize = new Size(800, 600); // Set the minimum size to 800x600
 
+            InitializeLayout();
             ResetForm();
             Customer_Load();
             Product_Load();
 
 
+        }
+        private void InitializeLayout()
+        {
+            Size = new Size(988, 636);
+            Dock = DockStyle.Fill;
+            MaximumSize = new Size(988, 636);
+            MinimumSize = new Size(988, 636);
         }
 
         private void Customer_Load()
@@ -111,7 +115,13 @@ namespace StockManagementSystem
 
         private void btn_AddCutomer_Click(object sender, EventArgs e)
         {
-            Customer customer = new Customer
+            if (string.IsNullOrWhiteSpace(tb_CustomerName.Text) || string.IsNullOrWhiteSpace(tb_CustomerPhone.Text))
+            {
+                XtraMessageBox.Show(".ادخل بيانات العميل", "خطأ في التحقق");
+                return;
+            }
+
+            var customer = new Customer
             {
                 Name = tb_CustomerName.Text,
                 Phone = tb_CustomerPhone.Text,
@@ -119,9 +129,8 @@ namespace StockManagementSystem
             };
             db.Customers.Add(customer);
             db.SaveChanges();
-            XtraMessageBox.Show("Customer added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Customer_Load(); // Refresh the customer list
-
+            XtraMessageBox.Show("!تم اضافة العميل بنجاح", "نجح");
+            Customer_Load();
 
         }
 
@@ -145,30 +154,46 @@ namespace StockManagementSystem
             if (sl_Products.EditValue == null || string.IsNullOrWhiteSpace(tb_ProductName.Text) ||
                 string.IsNullOrWhiteSpace(tb_ProductPrice.Text) || string.IsNullOrWhiteSpace(tb_ProductCount.Text))
             {
-                XtraMessageBox.Show("Please fill in all product fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show(".ادخل بيانات المنتج المطلوب", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (!int.TryParse(tb_ProductCount.Text, out int quantity) || quantity <= 0)
             {
-                XtraMessageBox.Show("Please enter a valid quantity.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show(".ادخل كمية مناسبة", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (!decimal.TryParse(tb_ProductPrice.Text, out decimal unitPrice) || unitPrice <= 0)
             {
-                XtraMessageBox.Show("Please enter a valid unit price.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show(".خطأ في سعر الوحدة ", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+            int productId = Convert.ToInt32(sl_Products.EditValue);
+            var existingProduct = customerBillItems.FirstOrDefault(item => item.ProductID == productId);
 
-            var existingProduct = customerBillItems.FirstOrDefault(item => item.ProductID == Convert.ToInt32(sl_Products.EditValue));
+
+            var product = db.Products.FirstOrDefault(p => p.ProductID == productId);
+            if(product != null)
+            {
+               if(product.QuantityInStock < quantity)
+                {
+                    XtraMessageBox.Show("الكمية المطلوبة اكبر من الموجودة ف المخزن ", "خطأ في الكمية", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                
+                }
+            }
+
+
+
             if (existingProduct != null)
             {
+               
                 // If the product already exists, update the quantity and total price
                 existingProduct.Quantity += Convert.ToInt32(tb_ProductCount.Text);
                 existingProduct.TotalPrice = existingProduct.Quantity * existingProduct.UnitPrice;
-                XtraMessageBox.Show("Product updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("!تم التعديل بنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 gridControl1.DataSource = null;
                 gridControl1.DataSource = customerBillItems;
                 return;
@@ -187,7 +212,7 @@ namespace StockManagementSystem
 
 
 
-            XtraMessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("!تمت اضافة المنتج بنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Clear product fields after adding
             sl_Products.EditValue = null;
@@ -238,18 +263,19 @@ namespace StockManagementSystem
                             selectedItem.Quantity = newQuantity;
                             selectedItem.TotalPrice = selectedItem.Quantity * selectedItem.UnitPrice;
                             gridView1.RefreshRow(selectedRowHandle); // Refresh the row to show updated values
-                            XtraMessageBox.Show("Product quantity updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            XtraMessageBox.Show("تم تعيل الكمية!", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            XtraMessageBox.Show("Please enter a valid quantity.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            XtraMessageBox.Show("ادخل كمية مناسبة.", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }
             }
             else
             {
-                XtraMessageBox.Show("Please select a product to edit.", "Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("يرجى تحديد منتج للتعديل.", "خطأ في التحديد", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
         }
 
@@ -267,13 +293,13 @@ namespace StockManagementSystem
                         customerBillItems.Remove(selectedItem); // Remove the item from the list
                         gridControl1.DataSource = null; // Clear the data source
                         gridControl1.DataSource = customerBillItems; // Rebind the updated list
-                        XtraMessageBox.Show("Product deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        XtraMessageBox.Show("تم حذف المنتج بنجاح!", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
             else
             {
-                XtraMessageBox.Show("Please select a product to delete.", "Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("اختر منتج للحذف", "خطأ في التحديد", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -282,7 +308,7 @@ namespace StockManagementSystem
             // calculate total bill amount
             if (customerBillItems.Count == 0)
             {
-                XtraMessageBox.Show("No products added to the bill.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(".ليس هناك منتجات ", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -346,7 +372,7 @@ namespace StockManagementSystem
                 tb_PillRemainingAmount.Text = remainingAmount.ToString("F2"); // Format to 2 decimal places
                 if (remainingAmount < 0)
                 {
-                    XtraMessageBox.Show("Payment exceeds total amount. Please enter a valid payment amount.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("لا يمكن ادخال مبلغ اكبر من المطلوب.", "خطأ ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     tb_PillPaymentAmount.Focus();
                 }
             }
@@ -361,32 +387,32 @@ namespace StockManagementSystem
             // save customer bill to database
             if (customerBillItems.Count == 0)
             {
-                XtraMessageBox.Show("No products added to the bill.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(".لم يتم اختيار منتجات", "خطأ ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (sl_Customers.EditValue == null)
             {
-                XtraMessageBox.Show("Please select a customer.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show(".لم يتم اختيار عملاء", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (string.IsNullOrWhiteSpace(tb_PillPaymentAmount.Text) || !decimal.TryParse(tb_PillPaymentAmount.Text, out decimal paymentAmount) || paymentAmount < 0)
             {
-                XtraMessageBox.Show("Please enter a valid payment amount.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("ادخل كمية مناسبة", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (string.IsNullOrWhiteSpace(tb_PillDiscount.Text) || !decimal.TryParse(tb_PillDiscount.Text, out decimal discount) || discount < 0)
             {
-                XtraMessageBox.Show("Please enter a valid discount amount.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show(".ادخل خصم مناسب", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (string.IsNullOrWhiteSpace(tb_TotalPillPrice.Text) || !decimal.TryParse(tb_TotalPillPrice.Text, out decimal totalAmount) || totalAmount < 0)
             {
-                XtraMessageBox.Show("Please calculate the total amount before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show(".احسب المجموع قبل الحفظ", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (string.IsNullOrWhiteSpace(tb_PillRemainingAmount.Text) || !decimal.TryParse(tb_PillRemainingAmount.Text, out decimal remainingAmount) || remainingAmount < 0)
             {
-                XtraMessageBox.Show("Please calculate the remaining amount before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show(".احسب الكمية المتبقية قبل الحفظ", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             // Create a new CustomerBill object and set its properties
@@ -413,7 +439,7 @@ namespace StockManagementSystem
 
             lbl_ShowPillNumber.Text = customerBill.CustomerBillID.ToString(); // Show the bill number
 
-            XtraMessageBox.Show("Customer bill saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show("!تم الحفظ بنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             ResetForm(); // Reset the form after saving the bill
 
@@ -424,24 +450,25 @@ namespace StockManagementSystem
             // Print the customer bill
             if (customerBillItems.Count == 0)
             {
-                XtraMessageBox.Show("No products added to the bill.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("لم يتم إضافة أي منتجات إلى الفاتورة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (sl_Customers.EditValue == null)
             {
-                XtraMessageBox.Show("Please select a customer.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("يرجى اختيار العميل.", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (string.IsNullOrWhiteSpace(tb_TotalPillPrice.Text) || !decimal.TryParse(tb_TotalPillPrice.Text, out decimal totalAmount) || totalAmount < 0)
             {
-                XtraMessageBox.Show("Please calculate the total amount before printing.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("يرجى حساب المبلغ الإجمالي قبل الطباعة.", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            // Print the bill using a report 
+
+            // طباعة الفاتورة باستخدام التقرير
             var customer = db.Customers.Find(Convert.ToInt32(sl_Customers.EditValue));
             if (customer == null)
             {
-                XtraMessageBox.Show("Customer not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("لم يتم العثور على العميل.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             var reportModel = new CustomerBillReportViewModel
@@ -519,18 +546,20 @@ namespace StockManagementSystem
 
         private void tb_ProductCount_TextChanged(object sender, EventArgs e)
         {
-            var existingProduct = customerBillItems.FirstOrDefault(item => item.ProductID == Convert.ToInt32(sl_Products.EditValue));
-
-            var price = existingProduct.UnitPrice;
-            var count=Convert.ToInt32(tb_ProductCount.Text);
-
-            if (existingProduct != null)
+            if (!int.TryParse(tb_ProductCount.Text, out int count))
             {
-                btn_showtotalProductPrice.Text= (price * count).ToString("F2"); 
+                count = 1;
+            }
 
-            }  
-            
-
+            if (sl_Products.EditValue != null && int.TryParse(sl_Products.EditValue.ToString(), out int productId))
+            {
+                var existingProduct = db.Products.FirstOrDefault(item => item.ProductID == productId);
+                if (existingProduct != null)
+                {
+                    var price = existingProduct.UnitPrice;
+                    btn_showtotalProductPrice.Text = (price * count).ToString("F2");
+                }
+            }
         }
     }
 }

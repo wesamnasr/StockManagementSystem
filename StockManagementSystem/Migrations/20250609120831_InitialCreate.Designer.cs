@@ -12,8 +12,8 @@ using StockManagementSystem.Models;
 namespace StockManagementSystem.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20250609082443_init")]
-    partial class init
+    [Migration("20250609120831_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -152,70 +152,70 @@ namespace StockManagementSystem.Migrations
                         new
                         {
                             CustomerBillID = 1,
-                            BillDate = new DateTime(2025, 6, 8, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3714),
+                            BillDate = new DateTime(2025, 6, 8, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(841),
                             CustomerID = 1,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 2,
-                            BillDate = new DateTime(2025, 6, 7, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3760),
+                            BillDate = new DateTime(2025, 6, 7, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(852),
                             CustomerID = 2,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 3,
-                            BillDate = new DateTime(2025, 6, 6, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3781),
+                            BillDate = new DateTime(2025, 6, 6, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(859),
                             CustomerID = 3,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 4,
-                            BillDate = new DateTime(2025, 6, 5, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3792),
+                            BillDate = new DateTime(2025, 6, 5, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(866),
                             CustomerID = 4,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 5,
-                            BillDate = new DateTime(2025, 6, 4, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3803),
+                            BillDate = new DateTime(2025, 6, 4, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(873),
                             CustomerID = 5,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 6,
-                            BillDate = new DateTime(2025, 6, 3, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3821),
+                            BillDate = new DateTime(2025, 6, 3, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(881),
                             CustomerID = 6,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 7,
-                            BillDate = new DateTime(2025, 6, 2, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3833),
+                            BillDate = new DateTime(2025, 6, 2, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(889),
                             CustomerID = 7,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 8,
-                            BillDate = new DateTime(2025, 6, 1, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3844),
+                            BillDate = new DateTime(2025, 6, 1, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(895),
                             CustomerID = 8,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 9,
-                            BillDate = new DateTime(2025, 5, 31, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3856),
+                            BillDate = new DateTime(2025, 5, 31, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(902),
                             CustomerID = 9,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 10,
-                            BillDate = new DateTime(2025, 5, 30, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3872),
+                            BillDate = new DateTime(2025, 5, 30, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(910),
                             CustomerID = 10,
                             TotalAmount = 0m
                         });
@@ -372,7 +372,7 @@ namespace StockManagementSystem.Migrations
                         new
                         {
                             PasswordID = 1,
-                            CreatedAt = new DateTime(2025, 6, 9, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(4365),
+                            CreatedAt = new DateTime(2025, 6, 9, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(1152),
                             NewPassword = "123",
                             OldPassword = "123"
                         });
@@ -616,7 +616,7 @@ namespace StockManagementSystem.Migrations
                         new
                         {
                             SupplierBillID = 1,
-                            BillDate = new DateTime(2025, 6, 8, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3482),
+                            BillDate = new DateTime(2025, 6, 8, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(593),
                             PaidAmount = 0m,
                             SupplierID = 1,
                             TotalAmount = 0m
@@ -624,7 +624,7 @@ namespace StockManagementSystem.Migrations
                         new
                         {
                             SupplierBillID = 2,
-                            BillDate = new DateTime(2025, 6, 7, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3558),
+                            BillDate = new DateTime(2025, 6, 7, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(675),
                             PaidAmount = 0m,
                             SupplierID = 2,
                             TotalAmount = 0m
@@ -632,7 +632,7 @@ namespace StockManagementSystem.Migrations
                         new
                         {
                             SupplierBillID = 3,
-                            BillDate = new DateTime(2025, 6, 6, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3568),
+                            BillDate = new DateTime(2025, 6, 6, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(680),
                             PaidAmount = 0m,
                             SupplierID = 3,
                             TotalAmount = 0m
@@ -640,7 +640,7 @@ namespace StockManagementSystem.Migrations
                         new
                         {
                             SupplierBillID = 4,
-                            BillDate = new DateTime(2025, 6, 5, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3575),
+                            BillDate = new DateTime(2025, 6, 5, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(685),
                             PaidAmount = 0m,
                             SupplierID = 4,
                             TotalAmount = 0m
@@ -648,7 +648,7 @@ namespace StockManagementSystem.Migrations
                         new
                         {
                             SupplierBillID = 5,
-                            BillDate = new DateTime(2025, 6, 4, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3581),
+                            BillDate = new DateTime(2025, 6, 4, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(689),
                             PaidAmount = 0m,
                             SupplierID = 5,
                             TotalAmount = 0m
@@ -656,7 +656,7 @@ namespace StockManagementSystem.Migrations
                         new
                         {
                             SupplierBillID = 6,
-                            BillDate = new DateTime(2025, 6, 3, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3591),
+                            BillDate = new DateTime(2025, 6, 3, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(695),
                             PaidAmount = 0m,
                             SupplierID = 6,
                             TotalAmount = 0m
@@ -664,7 +664,7 @@ namespace StockManagementSystem.Migrations
                         new
                         {
                             SupplierBillID = 7,
-                            BillDate = new DateTime(2025, 6, 2, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3599),
+                            BillDate = new DateTime(2025, 6, 2, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(699),
                             PaidAmount = 0m,
                             SupplierID = 7,
                             TotalAmount = 0m
@@ -672,7 +672,7 @@ namespace StockManagementSystem.Migrations
                         new
                         {
                             SupplierBillID = 8,
-                            BillDate = new DateTime(2025, 6, 1, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3607),
+                            BillDate = new DateTime(2025, 6, 1, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(704),
                             PaidAmount = 0m,
                             SupplierID = 8,
                             TotalAmount = 0m
@@ -680,7 +680,7 @@ namespace StockManagementSystem.Migrations
                         new
                         {
                             SupplierBillID = 9,
-                            BillDate = new DateTime(2025, 5, 31, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3614),
+                            BillDate = new DateTime(2025, 5, 31, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(708),
                             PaidAmount = 0m,
                             SupplierID = 9,
                             TotalAmount = 0m
@@ -688,7 +688,7 @@ namespace StockManagementSystem.Migrations
                         new
                         {
                             SupplierBillID = 10,
-                            BillDate = new DateTime(2025, 5, 30, 11, 24, 42, 418, DateTimeKind.Local).AddTicks(3622),
+                            BillDate = new DateTime(2025, 5, 30, 15, 8, 30, 937, DateTimeKind.Local).AddTicks(778),
                             PaidAmount = 0m,
                             SupplierID = 10,
                             TotalAmount = 0m

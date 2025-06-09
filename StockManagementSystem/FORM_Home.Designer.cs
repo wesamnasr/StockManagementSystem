@@ -1,13 +1,13 @@
 ﻿namespace StockManagementSystem
 {
-    partial class Form1
+    partial class FORM_Home
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,29 +20,38 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            pn_stats = new System.Windows.Forms.Panel();
             SuspendLayout();
             // 
-            // Form1
+            // pn_stats
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            pn_stats.Dock = System.Windows.Forms.DockStyle.Fill;
+            pn_stats.Location = new System.Drawing.Point(0, 0);
+            pn_stats.Name = "pn_stats";
+            pn_stats.Size = new System.Drawing.Size(988, 636);
+            pn_stats.TabIndex = 0;
+            // 
+            // FORM_Home
+            // 
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(849, 512);
-            Name = "Form1";
-            Text = "Form1";
+            BackColor = System.Drawing.Color.White;
+            Controls.Add(pn_stats);
+            Name = "FORM_Home";
+            Size = new System.Drawing.Size(988, 636);
             ResumeLayout(false);
-
         }
 
         #endregion
 
+        public System.Windows.Forms.Panel pn_stats;
     }
 }
-

@@ -117,7 +117,9 @@ namespace StockManagementSystem
                     label_title.Text = "الفواتير";
                     break;
                 case "الأصناف": 
-                    //selectedControl = new CustomerPillForm();
+                    ProductsForm products = new ProductsForm();
+                    products.Dock = DockStyle.Fill;
+                    pn_container.Controls.Add(products);
                     label_title.Text = "الأصناف";
                     break;
                 case "تغيير كلمة السر":

@@ -29,12 +29,12 @@ namespace StockManagementSystem
             if (CurrentCustomer == null)
             { //add new
                 var newCustomer = new Customer
-            {
-                Name = txtName.Text.Trim(),
-                Phone = txtPhone.Text.Trim(),
-                Email = txtEmail.Text.Trim(),
-                Address = txtAddress.Text.Trim(),
-
+                {
+                    Name = txtName.Text.Trim(),
+                    Phone = txtPhone.Text.Trim(),
+                    Email = txtEmail.Text.Trim(),
+                    Address = txtAddress.Text.Trim(),
+                    Debt = int.Parse(txtDept.Text) 
                 };
 
                 context.Customers.Add(newCustomer);
@@ -47,6 +47,7 @@ namespace StockManagementSystem
                     updatedCustomer.Phone = txtPhone.Text.Trim();
                     updatedCustomer.Email = txtEmail.Text.Trim();
                     updatedCustomer.Address = txtAddress.Text.Trim();
+                    updatedCustomer.Debt= int.Parse(txtDept.Text);
                 }
 
             }
@@ -74,6 +75,7 @@ namespace StockManagementSystem
                 txtPhone.Text = CurrentCustomer.Phone;
                 txtEmail.Text = CurrentCustomer.Email;
                 txtAddress.Text = CurrentCustomer.Address;
+                txtDept.Text=CurrentCustomer.Debt.ToString();
             }
         }
 

@@ -28,51 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new System.Windows.Forms.Panel();
+            components = new System.ComponentModel.Container();
             txtSearch = new System.Windows.Forms.TextBox();
-            label1 = new System.Windows.Forms.Label();
             btnAddSupplier = new System.Windows.Forms.Button();
             dataGridView1 = new System.Windows.Forms.DataGridView();
             colEdit = new System.Windows.Forms.DataGridViewButtonColumn();
             colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            panel1.SuspendLayout();
+            duesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            companyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            supplierIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            supplierBindingSource = new System.Windows.Forms.BindingSource(components);
+            flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)supplierBindingSource).BeginInit();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel1.Controls.Add(txtSearch);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(btnAddSupplier);
-            panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            panel1.Location = new System.Drawing.Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(902, 36);
-            panel1.TabIndex = 0;
             // 
             // txtSearch
             // 
-            txtSearch.Location = new System.Drawing.Point(684, 6);
+            txtSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
+            txtSearch.Location = new System.Drawing.Point(669, 12);
+            txtSearch.Multiline = true;
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new System.Drawing.Size(113, 23);
+            txtSearch.Size = new System.Drawing.Size(126, 26);
             txtSearch.TabIndex = 3;
             txtSearch.TextChanged += txtSearch_TextChanged;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(11, 4);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(66, 21);
-            label1.TabIndex = 2;
-            label1.Text = "الموردين";
             // 
             // btnAddSupplier
             // 
             btnAddSupplier.BackColor = System.Drawing.Color.FromArgb(56, 184, 151);
-            btnAddSupplier.Location = new System.Drawing.Point(803, -1);
+            btnAddSupplier.Location = new System.Drawing.Point(801, 3);
             btnAddSupplier.Name = "btnAddSupplier";
             btnAddSupplier.Size = new System.Drawing.Size(98, 35);
             btnAddSupplier.TabIndex = 1;
@@ -82,16 +72,19 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { colEdit, colDelete });
+            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { colEdit, colDelete, duesDataGridViewTextBoxColumn, addressDataGridViewTextBoxColumn, emailDataGridViewTextBoxColumn, descriptionDataGridViewTextBoxColumn, companyNameDataGridViewTextBoxColumn, phoneDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, supplierIDDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = supplierBindingSource;
             dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             dataGridView1.GridColor = System.Drawing.SystemColors.Info;
-            dataGridView1.Location = new System.Drawing.Point(0, 36);
+            dataGridView1.Location = new System.Drawing.Point(0, 43);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new System.Drawing.Size(902, 414);
+            dataGridView1.Size = new System.Drawing.Size(902, 407);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -109,29 +102,101 @@
             colDelete.Text = "حذف";
             colDelete.UseColumnTextForButtonValue = true;
             // 
+            // duesDataGridViewTextBoxColumn
+            // 
+            duesDataGridViewTextBoxColumn.DataPropertyName = "Dues";
+            duesDataGridViewTextBoxColumn.HeaderText = "المستحقات";
+            duesDataGridViewTextBoxColumn.Name = "duesDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            addressDataGridViewTextBoxColumn.HeaderText = "العنوان";
+            addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            emailDataGridViewTextBoxColumn.HeaderText = "الايميل";
+            emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            descriptionDataGridViewTextBoxColumn.HeaderText = "ملاحظات";
+            descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            // 
+            // companyNameDataGridViewTextBoxColumn
+            // 
+            companyNameDataGridViewTextBoxColumn.DataPropertyName = "CompanyName";
+            companyNameDataGridViewTextBoxColumn.HeaderText = "اسم الشركة";
+            companyNameDataGridViewTextBoxColumn.Name = "companyNameDataGridViewTextBoxColumn";
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            phoneDataGridViewTextBoxColumn.HeaderText = "رقم الهاتف";
+            phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            nameDataGridViewTextBoxColumn.HeaderText = "اسم المورد";
+            nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // supplierIDDataGridViewTextBoxColumn
+            // 
+            supplierIDDataGridViewTextBoxColumn.DataPropertyName = "SupplierID";
+            supplierIDDataGridViewTextBoxColumn.HeaderText = "رقم المورد";
+            supplierIDDataGridViewTextBoxColumn.Name = "supplierIDDataGridViewTextBoxColumn";
+            // 
+            // supplierBindingSource
+            // 
+            supplierBindingSource.DataSource = typeof(Models.Supplier);
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(btnAddSupplier);
+            flowLayoutPanel1.Controls.Add(txtSearch);
+            flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new System.Drawing.Size(902, 43);
+            flowLayoutPanel1.TabIndex = 4;
+            // 
             // SupplierForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(902, 450);
             Controls.Add(dataGridView1);
-            Controls.Add(panel1);
+            Controls.Add(flowLayoutPanel1);
             Name = "SupplierForm";
             Text = "SupplierForm";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            Load += SupplierForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)supplierBindingSource).EndInit();
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAddSupplier;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.BindingSource supplierBindingSource;
         private System.Windows.Forms.DataGridViewButtonColumn colEdit;
         private System.Windows.Forms.DataGridViewButtonColumn colDelete;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supplierIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

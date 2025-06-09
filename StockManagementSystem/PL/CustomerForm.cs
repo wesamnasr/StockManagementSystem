@@ -28,7 +28,7 @@ namespace StockManagementSystem
             if (dataGridView1.Columns.Contains("Invoices"))
                 dataGridView1.Columns["Invoices"].Visible = false;
 
-           SetArabicHeaders();
+          // SetArabicHeaders();
 
         }
 
@@ -47,7 +47,7 @@ namespace StockManagementSystem
             ////edit custom
             if (dataGridView1.Columns[e.ColumnIndex].Name == "colEdit" && e.RowIndex >= 0)
             {
-                int customerId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["CustomerId"].Value);
+                int customerId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["customerIDDataGridViewTextBoxColumn"].Value);
 
                 using (var db = new AppDBContext())
                 {
@@ -68,7 +68,7 @@ namespace StockManagementSystem
             ///delete custom
             if (dataGridView1.Columns[e.ColumnIndex].Name == "colDelete" && e.RowIndex >= 0)
             {
-                int customerId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["CustomerId"].Value);
+                int customerId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["customerIDDataGridViewTextBoxColumn"].Value);
 
                 var confirm = MessageBox.Show("هل انت متاكد من حذف هذا العميل؟",
                                               "Confirm Delete",
@@ -129,18 +129,18 @@ namespace StockManagementSystem
                     .ToList();
 
                 dataGridView1.DataSource = filtered;
-                SetArabicHeaders(); 
+              //  SetArabicHeaders(); 
             }
         }
 
-        private void SetArabicHeaders()
-        {
-            dataGridView1.Columns["CustomerID"].HeaderText = "رقم العميل";
-            dataGridView1.Columns["Name"].HeaderText = "الاسم";
-            dataGridView1.Columns["Phone"].HeaderText = "رقم الهاتف";
-            dataGridView1.Columns["Email"].HeaderText = "البريد الإلكتروني";
-            dataGridView1.Columns["Address"].HeaderText = "العنوان";
-        }
+        //private void SetArabicHeaders()
+        //{
+        //    dataGridView1.Columns["CustomerID"].HeaderText = "رقم العميل";
+        //    dataGridView1.Columns["Name"].HeaderText = "الاسم";
+        //    dataGridView1.Columns["Phone"].HeaderText = "رقم الهاتف";
+        //    dataGridView1.Columns["Email"].HeaderText = "البريد الإلكتروني";
+        //    dataGridView1.Columns["Address"].HeaderText = "العنوان";
+        //}
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {

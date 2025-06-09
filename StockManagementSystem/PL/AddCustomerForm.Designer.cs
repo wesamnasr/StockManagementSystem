@@ -39,6 +39,8 @@
             txtPhone = new System.Windows.Forms.TextBox();
             txtEmail = new System.Windows.Forms.TextBox();
             txtAddress = new System.Windows.Forms.TextBox();
+            label1 = new System.Windows.Forms.Label();
+            txtDept = new System.Windows.Forms.TextBox();
             SuspendLayout();
             // 
             // addLabel
@@ -141,11 +143,30 @@
             txtAddress.Size = new System.Drawing.Size(149, 23);
             txtAddress.TabIndex = 14;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label1.Location = new System.Drawing.Point(397, 250);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(59, 21);
+            label1.TabIndex = 15;
+            label1.Text = ": الديون";
+            // 
+            // txtDept
+            // 
+            txtDept.Location = new System.Drawing.Point(219, 252);
+            txtDept.Name = "txtDept";
+            txtDept.Size = new System.Drawing.Size(149, 23);
+            txtDept.TabIndex = 16;
+            // 
             // AddCustomerForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(485, 406);
+            Controls.Add(txtDept);
+            Controls.Add(label1);
             Controls.Add(txtAddress);
             Controls.Add(txtEmail);
             Controls.Add(txtPhone);
@@ -177,5 +198,7 @@
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDept;
     }
 }

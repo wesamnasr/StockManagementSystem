@@ -16,7 +16,7 @@ namespace StockManagementSystem
         public SupplierForm()
         {
             InitializeComponent();
-            LoadSuppliers();
+          //  LoadSuppliers();
             dataGridView1.CellFormatting += dataGridView1_CellFormatting; // Connect the event
 
         }
@@ -25,12 +25,14 @@ namespace StockManagementSystem
         {
             var context = new AppDBContext();
             dataGridView1.DataSource = context.Suppliers.ToList();
-            if (dataGridView1.Columns.Contains("Invoices"))
-                dataGridView1.Columns["Invoices"].Visible = false;
+            //if (dataGridView1.Columns.Contains("Invoices"))
+            //    dataGridView1.Columns["Invoices"].Visible = false;
 
-            if (dataGridView1.Columns.Contains("Products"))
-                dataGridView1.Columns["Products"].Visible = false;
-            SetArabicHeaders();
+            //if (dataGridView1.Columns.Contains("Products"))
+            //    dataGridView1.Columns["Products"].Visible = false;
+            //SetArabicHeaders();
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.DefaultCellStyle.Alignment= DataGridViewContentAlignment.MiddleCenter;
 
         }
 
@@ -49,7 +51,7 @@ namespace StockManagementSystem
             ////edit supp
             if (dataGridView1.Columns[e.ColumnIndex].Name == "colEdit" && e.RowIndex >= 0)
             {
-                int supplierId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["SupplierId"].Value);
+                int supplierId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["supplierIDDataGridViewTextBoxColumn"].Value);
 
                 using (var db = new AppDBContext())
                 {
@@ -70,7 +72,7 @@ namespace StockManagementSystem
             ///delete supp
             if (dataGridView1.Columns[e.ColumnIndex].Name == "colDelete" && e.RowIndex >= 0)
             {
-                int supplierId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["SupplierId"].Value);
+                int supplierId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["supplierIDDataGridViewTextBoxColumn"].Value);
 
                 var confirm = MessageBox.Show("هل انت متاكد من حذف هذا المورد؟",
                                               "Confirm Delete",
@@ -87,7 +89,7 @@ namespace StockManagementSystem
                             db.Suppliers.Remove(supplierToDelete);
                             db.SaveChanges();
                             MessageBox.Show("تم حذف المورد");
-                            LoadSuppliers(); 
+                            LoadSuppliers();
                         }
                         else
                         {
@@ -130,14 +132,14 @@ namespace StockManagementSystem
 
                 dataGridView1.DataSource = filtered;
 
-                SetArabicHeaders();
+             //   SetArabicHeaders();
             }
         }
         private void FilterSuppliers(string searchText)
         {
             using (var db = new AppDBContext())
             {
-               // decimal.TryParse(searchText, out decimal duesAmount);
+                // decimal.TryParse(searchText, out decimal duesAmount);
 
                 var filtered = db.Suppliers
                     .Where(s => s.Name.Contains(searchText) ||
@@ -145,31 +147,36 @@ namespace StockManagementSystem
                                 s.CompanyName.Contains(searchText) ||
                                 s.Email.Contains(searchText) ||
                                 s.Address.Contains(searchText)
-                              //  s.Dues == duesAmount
+                                //  s.Dues == duesAmount
                                 )
                     .ToList();
 
                 dataGridView1.DataSource = filtered;
-                SetArabicHeaders(); 
+                //SetArabicHeaders();
             }
         }
 
-        private void SetArabicHeaders()
-        {
-            dataGridView1.Columns["SupplierID"].HeaderText = "رقم المورد";
-            dataGridView1.Columns["Name"].HeaderText = "الاسم";
-            dataGridView1.Columns["Phone"].HeaderText = "رقم الهاتف";
-            dataGridView1.Columns["CompanyName"].HeaderText = "اسم الشركة";
-            dataGridView1.Columns["Description"].HeaderText = "الوصف";
-            dataGridView1.Columns["Email"].HeaderText = "البريد الإلكتروني";
-            dataGridView1.Columns["Address"].HeaderText = "العنوان";
-            dataGridView1.Columns["Dues"].HeaderText = "المستحقات";
-        }
+        //private void SetArabicHeaders()
+        //{
+        //    dataGridView1.Columns["SupplierID"].HeaderText = "رقم المورد";
+        //    dataGridView1.Columns["Name"].HeaderText = "الاسم";
+        //    dataGridView1.Columns["Phone"].HeaderText = "رقم الهاتف";
+        //    dataGridView1.Columns["CompanyName"].HeaderText = "اسم الشركة";
+        //    dataGridView1.Columns["Description"].HeaderText = "الوصف";
+        //    dataGridView1.Columns["Email"].HeaderText = "البريد الإلكتروني";
+        //    dataGridView1.Columns["Address"].HeaderText = "العنوان";
+        //    dataGridView1.Columns["Dues"].HeaderText = "المستحقات";
+        //}
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             FilterSuppliers(txtSearch.Text);
 
+        }
+
+        private void SupplierForm_Load(object sender, EventArgs e)
+        {
+            LoadSuppliers();
         }
     }
 }

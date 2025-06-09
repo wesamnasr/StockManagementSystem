@@ -95,6 +95,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             panel1.BackColor = System.Drawing.Color.DarkGray;
             panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             panel1.Controls.Add(labelControl14);
@@ -107,19 +108,20 @@
             panel1.Controls.Add(btn_PrintPill);
             panel1.Controls.Add(btn_SaveBill);
             panel1.Controls.Add(panel6);
-            panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            panel1.Location = new System.Drawing.Point(0, 391);
+            panel1.Location = new System.Drawing.Point(0, 481);
+            panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(988, 245);
+            panel1.Size = new System.Drawing.Size(1152, 301);
             panel1.TabIndex = 0;
             // 
             // labelControl14
             // 
             labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl14.Appearance.Options.UseFont = true;
-            labelControl14.Location = new System.Drawing.Point(818, 56);
+            labelControl14.Location = new System.Drawing.Point(954, 69);
+            labelControl14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl14.Name = "labelControl14";
-            labelControl14.Size = new System.Drawing.Size(43, 19);
+            labelControl14.Size = new System.Drawing.Size(52, 24);
             labelControl14.TabIndex = 18;
             labelControl14.Text = "الباقي";
             // 
@@ -127,24 +129,27 @@
             // 
             labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl13.Appearance.Options.UseFont = true;
-            labelControl13.Location = new System.Drawing.Point(764, 21);
+            labelControl13.Location = new System.Drawing.Point(891, 26);
+            labelControl13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl13.Name = "labelControl13";
-            labelControl13.Size = new System.Drawing.Size(97, 19);
+            labelControl13.Size = new System.Drawing.Size(118, 24);
             labelControl13.TabIndex = 17;
             labelControl13.Text = "المبلغ المدفوع";
             // 
             // tb_PillRemainingAmount
             // 
-            tb_PillRemainingAmount.Location = new System.Drawing.Point(477, 54);
+            tb_PillRemainingAmount.Location = new System.Drawing.Point(556, 66);
+            tb_PillRemainingAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tb_PillRemainingAmount.Name = "tb_PillRemainingAmount";
-            tb_PillRemainingAmount.Size = new System.Drawing.Size(150, 21);
+            tb_PillRemainingAmount.Size = new System.Drawing.Size(174, 23);
             tb_PillRemainingAmount.TabIndex = 16;
             // 
             // tb_PillPaymentAmount
             // 
-            tb_PillPaymentAmount.Location = new System.Drawing.Point(477, 19);
+            tb_PillPaymentAmount.Location = new System.Drawing.Point(556, 23);
+            tb_PillPaymentAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tb_PillPaymentAmount.Name = "tb_PillPaymentAmount";
-            tb_PillPaymentAmount.Size = new System.Drawing.Size(150, 21);
+            tb_PillPaymentAmount.Size = new System.Drawing.Size(174, 23);
             tb_PillPaymentAmount.TabIndex = 15;
             tb_PillPaymentAmount.TextChanged += textBox10_TextChanged;
             // 
@@ -152,9 +157,10 @@
             // 
             hl_DeleteBillData.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             hl_DeleteBillData.Appearance.Options.UseFont = true;
-            hl_DeleteBillData.Location = new System.Drawing.Point(664, 198);
+            hl_DeleteBillData.Location = new System.Drawing.Point(775, 244);
+            hl_DeleteBillData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             hl_DeleteBillData.Name = "hl_DeleteBillData";
-            hl_DeleteBillData.Size = new System.Drawing.Size(40, 23);
+            hl_DeleteBillData.Size = new System.Drawing.Size(50, 29);
             hl_DeleteBillData.TabIndex = 14;
             hl_DeleteBillData.Text = "حذف";
             hl_DeleteBillData.Click += hl_DeleteBillData_Click;
@@ -163,9 +169,10 @@
             // 
             labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl12.Appearance.Options.UseFont = true;
-            labelControl12.Location = new System.Drawing.Point(785, 87);
+            labelControl12.Location = new System.Drawing.Point(916, 107);
+            labelControl12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl12.Name = "labelControl12";
-            labelControl12.Size = new System.Drawing.Size(76, 19);
+            labelControl12.Size = new System.Drawing.Size(93, 24);
             labelControl12.TabIndex = 13;
             labelControl12.Text = "رقم الفاتورة";
             // 
@@ -173,9 +180,10 @@
             // 
             lbl_ShowPillNumber.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             lbl_ShowPillNumber.Appearance.Options.UseFont = true;
-            lbl_ShowPillNumber.Location = new System.Drawing.Point(522, 81);
+            lbl_ShowPillNumber.Location = new System.Drawing.Point(609, 100);
+            lbl_ShowPillNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             lbl_ShowPillNumber.Name = "lbl_ShowPillNumber";
-            lbl_ShowPillNumber.Size = new System.Drawing.Size(76, 19);
+            lbl_ShowPillNumber.Size = new System.Drawing.Size(93, 24);
             lbl_ShowPillNumber.TabIndex = 12;
             lbl_ShowPillNumber.Text = "رقم الفاتورة";
             // 
@@ -183,9 +191,10 @@
             // 
             btn_PrintPill.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold);
             btn_PrintPill.Appearance.Options.UseFont = true;
-            btn_PrintPill.Location = new System.Drawing.Point(477, 156);
+            btn_PrintPill.Location = new System.Drawing.Point(556, 192);
+            btn_PrintPill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btn_PrintPill.Name = "btn_PrintPill";
-            btn_PrintPill.Size = new System.Drawing.Size(150, 41);
+            btn_PrintPill.Size = new System.Drawing.Size(175, 50);
             btn_PrintPill.TabIndex = 11;
             btn_PrintPill.Text = "طباعة";
             btn_PrintPill.Click += btn_PrintPill_Click;
@@ -194,15 +203,17 @@
             // 
             btn_SaveBill.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold);
             btn_SaveBill.Appearance.Options.UseFont = true;
-            btn_SaveBill.Location = new System.Drawing.Point(733, 156);
+            btn_SaveBill.Location = new System.Drawing.Point(855, 192);
+            btn_SaveBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btn_SaveBill.Name = "btn_SaveBill";
-            btn_SaveBill.Size = new System.Drawing.Size(140, 41);
+            btn_SaveBill.Size = new System.Drawing.Size(163, 50);
             btn_SaveBill.TabIndex = 10;
             btn_SaveBill.Text = "حفظ";
             btn_SaveBill.Click += btn_SaveBill_Click;
             // 
             // panel6
             // 
+            panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             panel6.Controls.Add(simpleButton2);
             panel6.Controls.Add(btn_showtotalPillPrice);
@@ -211,51 +222,56 @@
             panel6.Controls.Add(labelControl10);
             panel6.Controls.Add(labelControl9);
             panel6.Controls.Add(labelControl7);
-            panel6.Dock = System.Windows.Forms.DockStyle.Left;
             panel6.Location = new System.Drawing.Point(0, 0);
+            panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             panel6.Name = "panel6";
-            panel6.Size = new System.Drawing.Size(343, 241);
+            panel6.Size = new System.Drawing.Size(400, 296);
             panel6.TabIndex = 0;
             // 
             // simpleButton2
             // 
             simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             simpleButton2.Appearance.Options.UseFont = true;
-            simpleButton2.Location = new System.Drawing.Point(184, 1);
+            simpleButton2.Location = new System.Drawing.Point(215, 1);
+            simpleButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             simpleButton2.Name = "simpleButton2";
-            simpleButton2.Size = new System.Drawing.Size(155, 26);
+            simpleButton2.Size = new System.Drawing.Size(181, 32);
             simpleButton2.TabIndex = 18;
             simpleButton2.Text = "الحساب";
             simpleButton2.Click += simpleButton2_Click;
             // 
             // btn_showtotalPillPrice
             // 
-            btn_showtotalPillPrice.Location = new System.Drawing.Point(14, 130);
+            btn_showtotalPillPrice.Location = new System.Drawing.Point(16, 160);
+            btn_showtotalPillPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btn_showtotalPillPrice.Name = "btn_showtotalPillPrice";
-            btn_showtotalPillPrice.Size = new System.Drawing.Size(150, 39);
+            btn_showtotalPillPrice.Size = new System.Drawing.Size(175, 48);
             btn_showtotalPillPrice.TabIndex = 17;
             // 
             // tb_PillDiscount
             // 
-            tb_PillDiscount.Location = new System.Drawing.Point(14, 85);
+            tb_PillDiscount.Location = new System.Drawing.Point(16, 105);
+            tb_PillDiscount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tb_PillDiscount.Name = "tb_PillDiscount";
-            tb_PillDiscount.Size = new System.Drawing.Size(150, 21);
+            tb_PillDiscount.Size = new System.Drawing.Size(174, 23);
             tb_PillDiscount.TabIndex = 14;
             // 
             // tb_TotalPillPrice
             // 
-            tb_TotalPillPrice.Location = new System.Drawing.Point(14, 50);
+            tb_TotalPillPrice.Location = new System.Drawing.Point(16, 62);
+            tb_TotalPillPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tb_TotalPillPrice.Name = "tb_TotalPillPrice";
-            tb_TotalPillPrice.Size = new System.Drawing.Size(150, 21);
+            tb_TotalPillPrice.Size = new System.Drawing.Size(174, 23);
             tb_TotalPillPrice.TabIndex = 11;
             // 
             // labelControl10
             // 
             labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl10.Appearance.Options.UseFont = true;
-            labelControl10.Location = new System.Drawing.Point(227, 138);
+            labelControl10.Location = new System.Drawing.Point(265, 170);
+            labelControl10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl10.Name = "labelControl10";
-            labelControl10.Size = new System.Drawing.Size(95, 19);
+            labelControl10.Size = new System.Drawing.Size(117, 24);
             labelControl10.TabIndex = 10;
             labelControl10.Text = "السعر النهائي";
             // 
@@ -263,9 +279,10 @@
             // 
             labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl9.Appearance.Options.UseFont = true;
-            labelControl9.Location = new System.Drawing.Point(276, 85);
+            labelControl9.Location = new System.Drawing.Point(322, 105);
+            labelControl9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl9.Name = "labelControl9";
-            labelControl9.Size = new System.Drawing.Size(34, 19);
+            labelControl9.Size = new System.Drawing.Size(42, 24);
             labelControl9.TabIndex = 9;
             labelControl9.Text = "خصم";
             // 
@@ -273,32 +290,36 @@
             // 
             labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl7.Appearance.Options.UseFont = true;
-            labelControl7.Location = new System.Drawing.Point(265, 48);
+            labelControl7.Location = new System.Drawing.Point(309, 59);
+            labelControl7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl7.Name = "labelControl7";
-            labelControl7.Size = new System.Drawing.Size(57, 19);
+            labelControl7.Size = new System.Drawing.Size(70, 24);
             labelControl7.TabIndex = 8;
             labelControl7.Text = "المجموع";
             // 
             // btn_DeletePillProduct
             // 
-            btn_DeletePillProduct.Location = new System.Drawing.Point(66, 356);
+            btn_DeletePillProduct.Location = new System.Drawing.Point(77, 438);
+            btn_DeletePillProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btn_DeletePillProduct.Name = "btn_DeletePillProduct";
-            btn_DeletePillProduct.Size = new System.Drawing.Size(67, 28);
+            btn_DeletePillProduct.Size = new System.Drawing.Size(78, 34);
             btn_DeletePillProduct.TabIndex = 16;
             btn_DeletePillProduct.Text = "حذف";
             btn_DeletePillProduct.Click += btn_DeletePillProduct_Click;
             // 
             // btn_EditPillProduct
             // 
-            btn_EditPillProduct.Location = new System.Drawing.Point(195, 358);
+            btn_EditPillProduct.Location = new System.Drawing.Point(227, 441);
+            btn_EditPillProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btn_EditPillProduct.Name = "btn_EditPillProduct";
-            btn_EditPillProduct.Size = new System.Drawing.Size(71, 26);
+            btn_EditPillProduct.Size = new System.Drawing.Size(83, 32);
             btn_EditPillProduct.TabIndex = 15;
             btn_EditPillProduct.Text = "تعديل";
             btn_EditPillProduct.Click += btn_EditPillProduct_Click;
             // 
             // panel3
             // 
+            panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             panel3.Controls.Add(sl_Customers);
             panel3.Controls.Add(label1);
@@ -311,27 +332,30 @@
             panel3.Controls.Add(tb_CustomerAddress);
             panel3.Controls.Add(tb_CustomerName);
             panel3.Controls.Add(simpleButton1);
-            panel3.Dock = System.Windows.Forms.DockStyle.Right;
             panel3.Font = new System.Drawing.Font("Tahoma", 12F);
-            panel3.Location = new System.Drawing.Point(690, 0);
+            panel3.Location = new System.Drawing.Point(805, 0);
+            panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             panel3.Name = "panel3";
-            panel3.Size = new System.Drawing.Size(298, 391);
+            panel3.Size = new System.Drawing.Size(347, 481);
             panel3.TabIndex = 2;
             // 
             // sl_Customers
             // 
-            sl_Customers.Location = new System.Drawing.Point(5, 60);
+            sl_Customers.Location = new System.Drawing.Point(6, 74);
+            sl_Customers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             sl_Customers.Name = "sl_Customers";
             sl_Customers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             sl_Customers.Properties.PopupView = searchLookUpEdit1View;
-            sl_Customers.Size = new System.Drawing.Size(125, 20);
+            sl_Customers.Size = new System.Drawing.Size(146, 22);
             sl_Customers.TabIndex = 10;
             sl_Customers.EditValueChanged += sl_Customers_EditValueChanged;
             // 
             // searchLookUpEdit1View
             // 
+            searchLookUpEdit1View.DetailHeight = 431;
             searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            searchLookUpEdit1View.OptionsEditForm.PopupEditFormWidth = 933;
             searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
@@ -339,17 +363,19 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold);
-            label1.Location = new System.Drawing.Point(100, -1);
+            label1.Location = new System.Drawing.Point(117, -1);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(138, 25);
+            label1.Size = new System.Drawing.Size(177, 33);
             label1.TabIndex = 0;
             label1.Text = "بيانات العميل";
             // 
             // btn_AddCutomer
             // 
-            btn_AddCutomer.Location = new System.Drawing.Point(100, 275);
+            btn_AddCutomer.Location = new System.Drawing.Point(117, 338);
+            btn_AddCutomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btn_AddCutomer.Name = "btn_AddCutomer";
-            btn_AddCutomer.Size = new System.Drawing.Size(140, 41);
+            btn_AddCutomer.Size = new System.Drawing.Size(163, 50);
             btn_AddCutomer.TabIndex = 9;
             btn_AddCutomer.Text = "اضافة";
             btn_AddCutomer.Click += btn_AddCutomer_Click;
@@ -358,9 +384,10 @@
             // 
             labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl3.Appearance.Options.UseFont = true;
-            labelControl3.Location = new System.Drawing.Point(239, 198);
+            labelControl3.Location = new System.Drawing.Point(279, 244);
+            labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl3.Name = "labelControl3";
-            labelControl3.Size = new System.Drawing.Size(45, 19);
+            labelControl3.Size = new System.Drawing.Size(55, 24);
             labelControl3.TabIndex = 8;
             labelControl3.Text = "العنوان";
             // 
@@ -368,9 +395,10 @@
             // 
             labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl2.Appearance.Options.UseFont = true;
-            labelControl2.Location = new System.Drawing.Point(239, 159);
+            labelControl2.Location = new System.Drawing.Point(279, 196);
+            labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl2.Name = "labelControl2";
-            labelControl2.Size = new System.Drawing.Size(42, 19);
+            labelControl2.Size = new System.Drawing.Size(52, 24);
             labelControl2.TabIndex = 7;
             labelControl2.Text = "الهاتف";
             // 
@@ -378,49 +406,55 @@
             // 
             labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl1.Appearance.Options.UseFont = true;
-            labelControl1.Location = new System.Drawing.Point(238, 115);
+            labelControl1.Location = new System.Drawing.Point(278, 142);
+            labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl1.Name = "labelControl1";
-            labelControl1.Size = new System.Drawing.Size(41, 19);
+            labelControl1.Size = new System.Drawing.Size(51, 24);
             labelControl1.TabIndex = 6;
             labelControl1.Text = "الاسم";
             // 
             // hl_DeleteCustomerData
             // 
-            hl_DeleteCustomerData.Location = new System.Drawing.Point(161, 325);
+            hl_DeleteCustomerData.Location = new System.Drawing.Point(188, 400);
+            hl_DeleteCustomerData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             hl_DeleteCustomerData.Name = "hl_DeleteCustomerData";
-            hl_DeleteCustomerData.Size = new System.Drawing.Size(23, 13);
+            hl_DeleteCustomerData.Size = new System.Drawing.Size(27, 16);
             hl_DeleteCustomerData.TabIndex = 5;
             hl_DeleteCustomerData.Text = "حذف";
             hl_DeleteCustomerData.Click += hl_DeleteCustomerData_Click;
             // 
             // tb_CustomerPhone
             // 
-            tb_CustomerPhone.Location = new System.Drawing.Point(5, 151);
+            tb_CustomerPhone.Location = new System.Drawing.Point(6, 186);
+            tb_CustomerPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tb_CustomerPhone.Name = "tb_CustomerPhone";
-            tb_CustomerPhone.Size = new System.Drawing.Size(150, 27);
+            tb_CustomerPhone.Size = new System.Drawing.Size(174, 32);
             tb_CustomerPhone.TabIndex = 4;
             // 
             // tb_CustomerAddress
             // 
-            tb_CustomerAddress.Location = new System.Drawing.Point(5, 190);
+            tb_CustomerAddress.Location = new System.Drawing.Point(6, 234);
+            tb_CustomerAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tb_CustomerAddress.Name = "tb_CustomerAddress";
-            tb_CustomerAddress.Size = new System.Drawing.Size(150, 27);
+            tb_CustomerAddress.Size = new System.Drawing.Size(174, 32);
             tb_CustomerAddress.TabIndex = 3;
             // 
             // tb_CustomerName
             // 
-            tb_CustomerName.Location = new System.Drawing.Point(5, 115);
+            tb_CustomerName.Location = new System.Drawing.Point(6, 142);
+            tb_CustomerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tb_CustomerName.Name = "tb_CustomerName";
-            tb_CustomerName.Size = new System.Drawing.Size(150, 27);
+            tb_CustomerName.Size = new System.Drawing.Size(174, 32);
             tb_CustomerName.TabIndex = 2;
             // 
             // simpleButton1
             // 
             simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             simpleButton1.Appearance.Options.UseFont = true;
-            simpleButton1.Location = new System.Drawing.Point(175, 58);
+            simpleButton1.Location = new System.Drawing.Point(204, 71);
+            simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             simpleButton1.Name = "simpleButton1";
-            simpleButton1.Size = new System.Drawing.Size(109, 23);
+            simpleButton1.Size = new System.Drawing.Size(127, 28);
             simpleButton1.TabIndex = 1;
             simpleButton1.Text = "عميل موجود سابقا";
             // 
@@ -433,37 +467,45 @@
             panel4.Controls.Add(btn_DeletePillProduct);
             panel4.Dock = System.Windows.Forms.DockStyle.Left;
             panel4.Location = new System.Drawing.Point(0, 0);
+            panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             panel4.Name = "panel4";
-            panel4.Size = new System.Drawing.Size(343, 391);
+            panel4.Size = new System.Drawing.Size(400, 783);
             panel4.TabIndex = 3;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold);
-            label3.Location = new System.Drawing.Point(97, 0);
+            label3.Location = new System.Drawing.Point(113, 0);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(146, 25);
+            label3.Size = new System.Drawing.Size(186, 33);
             label3.TabIndex = 0;
             label3.Text = "بيانات الفاتورة";
             // 
             // gridControl1
             // 
-            gridControl1.Location = new System.Drawing.Point(0, 28);
+            gridControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            gridControl1.Location = new System.Drawing.Point(0, 184);
             gridControl1.MainView = gridView1;
+            gridControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             gridControl1.Name = "gridControl1";
-            gridControl1.Size = new System.Drawing.Size(343, 305);
+            gridControl1.Size = new System.Drawing.Size(400, 375);
             gridControl1.TabIndex = 1;
             gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
             gridControl1.Click += gridControl1_Click;
             // 
             // gridView1
             // 
+            gridView1.DetailHeight = 431;
             gridView1.GridControl = gridControl1;
             gridView1.Name = "gridView1";
+            gridView1.OptionsEditForm.PopupEditFormWidth = 933;
             // 
             // panel5
             // 
+            panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             panel5.Controls.Add(sl_Products);
             panel5.Controls.Add(hl_DeleteProductData);
@@ -478,34 +520,38 @@
             panel5.Controls.Add(tb_ProductCount);
             panel5.Controls.Add(tb_ProductName);
             panel5.Controls.Add(simpleButton3);
-            panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel5.Location = new System.Drawing.Point(343, 0);
+            panel5.Location = new System.Drawing.Point(400, 0);
+            panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             panel5.Name = "panel5";
-            panel5.Size = new System.Drawing.Size(347, 391);
+            panel5.Size = new System.Drawing.Size(404, 481);
             panel5.TabIndex = 4;
             // 
             // sl_Products
             // 
-            sl_Products.Location = new System.Drawing.Point(18, 55);
+            sl_Products.Location = new System.Drawing.Point(21, 68);
+            sl_Products.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             sl_Products.Name = "sl_Products";
             sl_Products.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             sl_Products.Properties.PopupView = searchLookUpEdit2View;
-            sl_Products.Size = new System.Drawing.Size(150, 20);
+            sl_Products.Size = new System.Drawing.Size(175, 22);
             sl_Products.TabIndex = 16;
             sl_Products.EditValueChanged += sl_Products_EditValueChanged;
             // 
             // searchLookUpEdit2View
             // 
+            searchLookUpEdit2View.DetailHeight = 431;
             searchLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             searchLookUpEdit2View.Name = "searchLookUpEdit2View";
+            searchLookUpEdit2View.OptionsEditForm.PopupEditFormWidth = 933;
             searchLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
             searchLookUpEdit2View.OptionsView.ShowGroupPanel = false;
             // 
             // hl_DeleteProductData
             // 
-            hl_DeleteProductData.Location = new System.Drawing.Point(159, 320);
+            hl_DeleteProductData.Location = new System.Drawing.Point(186, 394);
+            hl_DeleteProductData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             hl_DeleteProductData.Name = "hl_DeleteProductData";
-            hl_DeleteProductData.Size = new System.Drawing.Size(23, 13);
+            hl_DeleteProductData.Size = new System.Drawing.Size(27, 16);
             hl_DeleteProductData.TabIndex = 15;
             hl_DeleteProductData.Text = "حذف";
             hl_DeleteProductData.Click += hl_DeleteProductData_Click;
@@ -514,26 +560,29 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold);
-            label2.Location = new System.Drawing.Point(110, -1);
+            label2.Location = new System.Drawing.Point(128, -1);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(104, 25);
+            label2.Size = new System.Drawing.Size(132, 33);
             label2.TabIndex = 0;
             label2.Text = " المنتجات";
             // 
             // btn_AddProduct
             // 
-            btn_AddProduct.Location = new System.Drawing.Point(87, 275);
+            btn_AddProduct.Location = new System.Drawing.Point(102, 338);
+            btn_AddProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btn_AddProduct.Name = "btn_AddProduct";
-            btn_AddProduct.Size = new System.Drawing.Size(155, 39);
+            btn_AddProduct.Size = new System.Drawing.Size(181, 48);
             btn_AddProduct.TabIndex = 14;
             btn_AddProduct.Text = "اضافة";
             btn_AddProduct.Click += btn_AddProduct_Click;
             // 
             // btn_showtotalProductPrice
             // 
-            btn_showtotalProductPrice.Location = new System.Drawing.Point(51, 214);
+            btn_showtotalProductPrice.Location = new System.Drawing.Point(59, 263);
+            btn_showtotalProductPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btn_showtotalProductPrice.Name = "btn_showtotalProductPrice";
-            btn_showtotalProductPrice.Size = new System.Drawing.Size(98, 40);
+            btn_showtotalProductPrice.Size = new System.Drawing.Size(114, 49);
             btn_showtotalProductPrice.TabIndex = 13;
             btn_showtotalProductPrice.Text = "السعر";
             // 
@@ -541,9 +590,10 @@
             // 
             labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl8.Appearance.Options.UseFont = true;
-            labelControl8.Location = new System.Drawing.Point(181, 222);
+            labelControl8.Location = new System.Drawing.Point(211, 273);
+            labelControl8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl8.Name = "labelControl8";
-            labelControl8.Size = new System.Drawing.Size(134, 19);
+            labelControl8.Size = new System.Drawing.Size(163, 24);
             labelControl8.TabIndex = 12;
             labelControl8.Text = "اجمالي سعر المنتج";
             // 
@@ -551,26 +601,29 @@
             // 
             labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl6.Appearance.Options.UseFont = true;
-            labelControl6.Location = new System.Drawing.Point(226, 127);
+            labelControl6.Location = new System.Drawing.Point(264, 156);
+            labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl6.Name = "labelControl6";
-            labelControl6.Size = new System.Drawing.Size(81, 19);
+            labelControl6.Size = new System.Drawing.Size(100, 24);
             labelControl6.TabIndex = 10;
             labelControl6.Text = "سعر القطعة";
             // 
             // tb_ProductPrice
             // 
-            tb_ProductPrice.Location = new System.Drawing.Point(18, 127);
+            tb_ProductPrice.Location = new System.Drawing.Point(21, 156);
+            tb_ProductPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tb_ProductPrice.Name = "tb_ProductPrice";
-            tb_ProductPrice.Size = new System.Drawing.Size(150, 21);
+            tb_ProductPrice.Size = new System.Drawing.Size(174, 23);
             tb_ProductPrice.TabIndex = 9;
             // 
             // labelControl5
             // 
             labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl5.Appearance.Options.UseFont = true;
-            labelControl5.Location = new System.Drawing.Point(209, 175);
+            labelControl5.Location = new System.Drawing.Point(244, 215);
+            labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl5.Name = "labelControl5";
-            labelControl5.Size = new System.Drawing.Size(104, 19);
+            labelControl5.Size = new System.Drawing.Size(128, 24);
             labelControl5.TabIndex = 8;
             labelControl5.Text = "الكمية المطلوبة";
             // 
@@ -578,45 +631,50 @@
             // 
             labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             labelControl4.Appearance.Options.UseFont = true;
-            labelControl4.Location = new System.Drawing.Point(226, 98);
+            labelControl4.Location = new System.Drawing.Point(264, 121);
+            labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             labelControl4.Name = "labelControl4";
-            labelControl4.Size = new System.Drawing.Size(78, 19);
+            labelControl4.Size = new System.Drawing.Size(96, 24);
             labelControl4.TabIndex = 7;
             labelControl4.Text = "اسم المنتج";
             // 
             // tb_ProductCount
             // 
-            tb_ProductCount.Location = new System.Drawing.Point(18, 173);
+            tb_ProductCount.Location = new System.Drawing.Point(21, 213);
+            tb_ProductCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tb_ProductCount.Name = "tb_ProductCount";
-            tb_ProductCount.Size = new System.Drawing.Size(150, 21);
+            tb_ProductCount.Size = new System.Drawing.Size(174, 23);
             tb_ProductCount.TabIndex = 4;
             tb_ProductCount.TextChanged += tb_ProductCount_TextChanged;
             // 
             // tb_ProductName
             // 
-            tb_ProductName.Location = new System.Drawing.Point(18, 100);
+            tb_ProductName.Location = new System.Drawing.Point(21, 123);
+            tb_ProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             tb_ProductName.Name = "tb_ProductName";
-            tb_ProductName.Size = new System.Drawing.Size(150, 21);
+            tb_ProductName.Size = new System.Drawing.Size(174, 23);
             tb_ProductName.TabIndex = 3;
             // 
             // simpleButton3
             // 
-            simpleButton3.Location = new System.Drawing.Point(209, 53);
+            simpleButton3.Location = new System.Drawing.Point(244, 65);
+            simpleButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             simpleButton3.Name = "simpleButton3";
-            simpleButton3.Size = new System.Drawing.Size(95, 23);
+            simpleButton3.Size = new System.Drawing.Size(111, 28);
             simpleButton3.TabIndex = 1;
             simpleButton3.Text = "اختيار المنتج";
             // 
             // CustomerBillForm
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel1);
+            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             Name = "CustomerBillForm";
-            Size = new System.Drawing.Size(988, 636);
+            Size = new System.Drawing.Size(1153, 783);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel6.ResumeLayout(false);

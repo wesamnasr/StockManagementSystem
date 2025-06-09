@@ -47,7 +47,7 @@ namespace StockManagementSystem.Migrations
 
                     b.HasKey("CustomerID");
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customers", (string)null);
 
                     b.HasData(
                         new
@@ -143,7 +143,7 @@ namespace StockManagementSystem.Migrations
 
                     b.HasIndex("CustomerID");
 
-                    b.ToTable("CustomerBills");
+                    b.ToTable("CustomerBills", (string)null);
 
                     b.HasData(
                         new
@@ -247,7 +247,7 @@ namespace StockManagementSystem.Migrations
 
                     b.HasIndex("ProductID");
 
-                    b.ToTable("CustomerBillItems");
+                    b.ToTable("CustomerBillItems", (string)null);
 
                     b.HasData(
                         new
@@ -363,7 +363,7 @@ namespace StockManagementSystem.Migrations
 
                     b.HasKey("PasswordID");
 
-                    b.ToTable("Passwords");
+                    b.ToTable("Passwords", (string)null);
 
                     b.HasData(
                         new
@@ -402,7 +402,7 @@ namespace StockManagementSystem.Migrations
 
                     b.HasIndex("SupplierID");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
 
                     b.HasData(
                         new
@@ -515,7 +515,7 @@ namespace StockManagementSystem.Migrations
 
                     b.HasKey("SupplierID");
 
-                    b.ToTable("Suppliers");
+                    b.ToTable("Suppliers", (string)null);
 
                     b.HasData(
                         new
@@ -607,7 +607,7 @@ namespace StockManagementSystem.Migrations
 
                     b.HasIndex("SupplierID");
 
-                    b.ToTable("SupplierBills");
+                    b.ToTable("SupplierBills", (string)null);
 
                     b.HasData(
                         new
@@ -727,7 +727,7 @@ namespace StockManagementSystem.Migrations
 
                     b.HasIndex("SupplierBillID");
 
-                    b.ToTable("SupplierBillItems");
+                    b.ToTable("SupplierBillItems", (string)null);
 
                     b.HasData(
                         new

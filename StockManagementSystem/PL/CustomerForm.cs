@@ -11,7 +11,7 @@ using StockManagementSystem.Models;
 
 namespace StockManagementSystem
 {
-    public partial class CustomerForm : Form
+    public partial class CustomerForm : UserControl
     {
         public CustomerForm()
         {

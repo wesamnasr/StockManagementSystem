@@ -8,7 +8,7 @@ using StockManagementSystem.Models;
 
 namespace Stock_Management_Dev
 {
-    public partial class SupplierBillform : DevExpress.XtraEditors.XtraForm
+    public partial class SupplierBillform : UserControl
     {
         public SupplierBillform()
         {
@@ -157,7 +157,7 @@ namespace Stock_Management_Dev
         private void addnewbill_Click(object sender, EventArgs e)
         {
             var form2 = new Addsupbill();
-            form2.ShowDialog();  
+            form2.Show();  
         }
 
         public void RefreshSupplierBills()

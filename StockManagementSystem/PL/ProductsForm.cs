@@ -12,10 +12,10 @@ using StockManagementSystem.Models;
 
 namespace Stock_Management_Dev
 {
-    public partial class ProductsForm : Form
+    public partial class ProductsForm : UserControl
     {
         AppDBContext context;
-        
+
         public ProductsForm()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace Stock_Management_Dev
             AddProductBtn.BackColor = Color.MediumSeaGreen;
             AddProductBtn.FlatStyle = FlatStyle.Flat;
             AddProductBtn.ForeColor = Color.White;
-            
+
 
 
         }
@@ -103,17 +103,23 @@ namespace Stock_Management_Dev
                 int IDForUpdate = Convert.ToInt32(ProductsTable.Rows[e.RowIndex].Cells[0].Value);
 
                 var ProductToUpdate = context.Products.Find(IDForUpdate);
-                UpdateProductForm updateProductForm = new UpdateProductForm() { 
+                UpdateProductForm updateProductForm = new UpdateProductForm()
+                {
                     ProductID = ProductToUpdate.ProductID,
-                    ProductName= ProductToUpdate.Name,
+                    ProductName = ProductToUpdate.Name,
                     ProductQuantity = ProductToUpdate.QuantityInStock,
-                    ProductDescription= ProductToUpdate.Description,
+                    ProductDescription = ProductToUpdate.Description,
                     ProductPrice = ProductToUpdate.UnitPrice,
                     SupplierID = ProductToUpdate.SupplierID,
                 };
                 updateProductForm.ShowDialog();
                 LoadProducts();
             }
+
+        }
+
+        private void AddProductBtn_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

@@ -91,24 +91,28 @@ namespace StockManagementSystem
                     label_title.Text = "الرئيسية";
                     break;
                 case "الموردين": 
-                  
+                    SupplierForm supplierForm = new SupplierForm();
+                    supplierForm.Dock = DockStyle.Fill;
+                    pn_container.Controls.Add(supplierForm);
                     label_title.Text = "الموردين";
                     break;
-                case "فاتورة عميل": 
-                    //selectedControl = new CustomerPillForm();
+                case "فاتورة عميل":
+                    CustomerBillForm customerForm = new CustomerBillForm();
+                    customerForm.Dock = DockStyle.Fill;
+                    pn_container.Controls.Add(customerForm);
                     label_title.Text = "فاتورة عميل";
                     break;
-                case "فاتورة مورد": 
-                    //selectedControl = new CustomerPillForm();
+                case "فاتورة مورد":
+                    SupplierBillform supplierBillform = new SupplierBillform();
+                    supplierBillform.Dock = DockStyle.Fill;
+                    pn_container.Controls.Add(supplierBillform);
                     label_title.Text = "فاتورة مورد";
-                    break;
-                case "الديون": 
-                    //selectedControl = new CustomerPillForm();
-                    label_title.Text = "الديون";
-                    break;
-                case "المستحقات":
-                    //selectedControl = new CustomerPillForm();
-                    label_title.Text = "المستحقات";
+                    break;                              
+                case "العملاء":
+                    CustomerForm customer = new CustomerForm();
+                    customer.Dock = DockStyle.Fill;
+                    pn_container.Controls.Add(customer);
+                    label_title.Text = "العملاء";
                     break;
                 case "الفواتير":
                     BillsView billView = new BillsView();
@@ -117,11 +121,12 @@ namespace StockManagementSystem
                     label_title.Text = "الفواتير";
                     break;
                 case "الأصناف": 
-                    //selectedControl = new CustomerPillForm();
+                    ProductsForm products = new ProductsForm();
+                    products.Dock = DockStyle.Fill;
+                    pn_container.Controls.Add(products);
                     label_title.Text = "الأصناف";
                     break;
                 case "تغيير كلمة السر":
-                    //selectedControl = new CustomerPillForm();
                     label_title.Text = "تغيير كلمة السر";
                     ChangePassword change = new ChangePassword();
                     this.LookAndFeel.UseDefaultLookAndFeel = true;

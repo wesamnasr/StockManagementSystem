@@ -39,11 +39,10 @@
             accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -148,7 +147,7 @@
             // accordionControl1
             // 
             accordionControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { accordionControlElement8, accordionControlElement1, accordionControlElement9, accordionControlElement4, accordionControlElement13, accordionControlElement10, accordionControlElement11, accordionControlElement12, accordionControlElement14 });
+            accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { accordionControlElement8, accordionControlElement1, accordionControlElement10, accordionControlElement9, accordionControlElement4, accordionControlElement13, accordionControlElement12, accordionControlElement14 });
             accordionControl1.Location = new System.Drawing.Point(988, 0);
             accordionControl1.LookAndFeel.SkinName = "Office 2019 Dark Gray";
             accordionControl1.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -165,7 +164,7 @@
             // 
             accordionControlElement8.Appearance.Default.Font = new System.Drawing.Font("LBC", 17.9999981F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             accordionControlElement8.Appearance.Default.Options.UseFont = true;
-            accordionControlElement8.Height = 58;
+            accordionControlElement8.Height = 65;
             accordionControlElement8.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("accordionControlElement8.ImageOptions.Image");
             accordionControlElement8.ImageOptions.ImageUri.Uri = "Home";
             accordionControlElement8.Name = "accordionControlElement8";
@@ -177,17 +176,27 @@
             accordionControlElement1.Appearance.Default.Font = new System.Drawing.Font("LBC", 17.9999981F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             accordionControlElement1.Appearance.Default.Options.UseFont = true;
             accordionControlElement1.Expanded = true;
-            accordionControlElement1.Height = 58;
+            accordionControlElement1.Height = 65;
             accordionControlElement1.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("accordionControlElement1.ImageOptions.Image");
             accordionControlElement1.Name = "accordionControlElement1";
             accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement1.Text = "الأصناف";
             // 
+            // accordionControlElement10
+            // 
+            accordionControlElement10.Appearance.Default.Font = new System.Drawing.Font("LBC", 17.9999981F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            accordionControlElement10.Appearance.Default.Options.UseFont = true;
+            accordionControlElement10.Height = 65;
+            accordionControlElement10.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("accordionControlElement10.ImageOptions.Image");
+            accordionControlElement10.Name = "accordionControlElement10";
+            accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            accordionControlElement10.Text = "العملاء";
+            // 
             // accordionControlElement9
             // 
             accordionControlElement9.Appearance.Default.Font = new System.Drawing.Font("LBC", 17.9999981F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             accordionControlElement9.Appearance.Default.Options.UseFont = true;
-            accordionControlElement9.Height = 58;
+            accordionControlElement9.Height = 65;
             accordionControlElement9.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("accordionControlElement9.ImageOptions.SvgImage");
             accordionControlElement9.Name = "accordionControlElement9";
             accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
@@ -197,7 +206,7 @@
             // 
             accordionControlElement4.Appearance.Default.Font = new System.Drawing.Font("LBC", 17.9999981F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             accordionControlElement4.Appearance.Default.Options.UseFont = true;
-            accordionControlElement4.Height = 58;
+            accordionControlElement4.Height = 65;
             accordionControlElement4.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("accordionControlElement4.ImageOptions.Image");
             accordionControlElement4.Name = "accordionControlElement4";
             accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
@@ -207,37 +216,17 @@
             // 
             accordionControlElement13.Appearance.Default.Font = new System.Drawing.Font("LBC", 17.9999981F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             accordionControlElement13.Appearance.Default.Options.UseFont = true;
-            accordionControlElement13.Height = 58;
+            accordionControlElement13.Height = 65;
             accordionControlElement13.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("accordionControlElement13.ImageOptions.Image");
             accordionControlElement13.Name = "accordionControlElement13";
             accordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement13.Text = "فاتورة مورد";
             // 
-            // accordionControlElement10
-            // 
-            accordionControlElement10.Appearance.Default.Font = new System.Drawing.Font("LBC", 17.9999981F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            accordionControlElement10.Appearance.Default.Options.UseFont = true;
-            accordionControlElement10.Height = 58;
-            accordionControlElement10.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("accordionControlElement10.ImageOptions.SvgImage");
-            accordionControlElement10.Name = "accordionControlElement10";
-            accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            accordionControlElement10.Text = "الديون";
-            // 
-            // accordionControlElement11
-            // 
-            accordionControlElement11.Appearance.Default.Font = new System.Drawing.Font("LBC", 17.9999981F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            accordionControlElement11.Appearance.Default.Options.UseFont = true;
-            accordionControlElement11.Height = 58;
-            accordionControlElement11.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("accordionControlElement11.ImageOptions.SvgImage");
-            accordionControlElement11.Name = "accordionControlElement11";
-            accordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            accordionControlElement11.Text = "المستحقات";
-            // 
             // accordionControlElement12
             // 
             accordionControlElement12.Appearance.Default.Font = new System.Drawing.Font("LBC", 17.9999981F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             accordionControlElement12.Appearance.Default.Options.UseFont = true;
-            accordionControlElement12.Height = 58;
+            accordionControlElement12.Height = 65;
             accordionControlElement12.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("accordionControlElement12.ImageOptions.SvgImage");
             accordionControlElement12.Name = "accordionControlElement12";
             accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
@@ -247,7 +236,7 @@
             // 
             accordionControlElement14.Appearance.Default.Font = new System.Drawing.Font("LBC", 17.9999981F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             accordionControlElement14.Appearance.Default.Options.UseFont = true;
-            accordionControlElement14.Height = 58;
+            accordionControlElement14.Height = 65;
             accordionControlElement14.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("accordionControlElement14.ImageOptions.Image");
             accordionControlElement14.Name = "accordionControlElement14";
             accordionControlElement14.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
@@ -343,7 +332,6 @@
         private System.Windows.Forms.Label label_title;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement14;

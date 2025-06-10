@@ -11,7 +11,7 @@ using StockManagementSystem.Models;
 
 namespace StockManagementSystem
 {
-    public partial class SupplierForm : Form
+    public partial class SupplierForm : UserControl
     {
         public SupplierForm()
         {

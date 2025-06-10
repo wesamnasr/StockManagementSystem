@@ -70,6 +70,7 @@ namespace StockManagementSystem
             else
             {
                 main.Show();
+                this.Hide();
             }
         }
 

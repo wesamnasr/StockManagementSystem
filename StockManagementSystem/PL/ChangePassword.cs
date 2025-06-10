@@ -14,7 +14,7 @@ using StockManagementSystem.Models;
 namespace StockManagementSystem
 {
 
-    public partial class ChangePassword : Form
+    public partial class ChangePassword : UserControl
     {
         Toast toast = new Toast();
 
@@ -62,6 +62,13 @@ namespace StockManagementSystem
                 toast2.txt_caption.Text = "تم تغيير كلمة السر بنجاح";
                 toast2.alert_color.BackColor = Color.Green;
                 toast2.Show();
+                context.Passwords.Add(new Password
+                {
+                    OldPassword = Pass.NewPassword,
+                    NewPassword = newpass_txt.Text,
+                    CreatedAt = DateTime.Now
+                });
+                context.SaveChanges();
             }
             else
             {

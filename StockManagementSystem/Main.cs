@@ -129,9 +129,8 @@ namespace StockManagementSystem
                 case "تغيير كلمة السر":
                     label_title.Text = "تغيير كلمة السر";
                     ChangePassword change = new ChangePassword();
-                    this.LookAndFeel.UseDefaultLookAndFeel = true;
                     change.Dock = DockStyle.Fill;
-                    pn_container.Controls.Add(change.pn_cont);
+                    pn_container.Controls.Add(change);
                     break;
             }
         }

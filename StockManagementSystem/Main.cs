@@ -99,6 +99,7 @@ namespace StockManagementSystem
                 case "فاتورة عميل":
                     CustomerBillForm customerForm = new CustomerBillForm();
                     customerForm.Dock = DockStyle.Fill;
+                    customerForm.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
                     pn_container.Controls.Add(customerForm);
                     label_title.Text = "فاتورة عميل";
                     break;

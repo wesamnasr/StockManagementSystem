@@ -116,23 +116,23 @@
             // 
             // labelControl14
             // 
-            labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl14.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl14.Appearance.Options.UseFont = true;
             labelControl14.Location = new System.Drawing.Point(896, 59);
             labelControl14.Margin = new System.Windows.Forms.Padding(4);
             labelControl14.Name = "labelControl14";
-            labelControl14.Size = new System.Drawing.Size(52, 24);
+            labelControl14.Size = new System.Drawing.Size(51, 26);
             labelControl14.TabIndex = 18;
             labelControl14.Text = "الباقي";
             // 
             // labelControl13
             // 
-            labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl13.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl13.Appearance.Options.UseFont = true;
             labelControl13.Location = new System.Drawing.Point(833, 16);
             labelControl13.Margin = new System.Windows.Forms.Padding(4);
             labelControl13.Name = "labelControl13";
-            labelControl13.Size = new System.Drawing.Size(118, 24);
+            labelControl13.Size = new System.Drawing.Size(122, 26);
             labelControl13.TabIndex = 17;
             labelControl13.Text = "المبلغ المدفوع";
             // 
@@ -155,41 +155,41 @@
             // 
             // hl_DeleteBillData
             // 
-            hl_DeleteBillData.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            hl_DeleteBillData.Appearance.Font = new System.Drawing.Font("LBC", 13.7999992F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             hl_DeleteBillData.Appearance.Options.UseFont = true;
             hl_DeleteBillData.Location = new System.Drawing.Point(690, 187);
             hl_DeleteBillData.Margin = new System.Windows.Forms.Padding(4);
             hl_DeleteBillData.Name = "hl_DeleteBillData";
-            hl_DeleteBillData.Size = new System.Drawing.Size(50, 29);
+            hl_DeleteBillData.Size = new System.Drawing.Size(45, 30);
             hl_DeleteBillData.TabIndex = 14;
             hl_DeleteBillData.Text = "حذف";
             hl_DeleteBillData.Click += hl_DeleteBillData_Click;
             // 
             // labelControl12
             // 
-            labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl12.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl12.Appearance.Options.UseFont = true;
             labelControl12.Location = new System.Drawing.Point(858, 97);
             labelControl12.Margin = new System.Windows.Forms.Padding(4);
             labelControl12.Name = "labelControl12";
-            labelControl12.Size = new System.Drawing.Size(93, 24);
+            labelControl12.Size = new System.Drawing.Size(94, 26);
             labelControl12.TabIndex = 13;
             labelControl12.Text = "رقم الفاتورة";
             // 
             // lbl_ShowPillNumber
             // 
-            lbl_ShowPillNumber.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            lbl_ShowPillNumber.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             lbl_ShowPillNumber.Appearance.Options.UseFont = true;
             lbl_ShowPillNumber.Location = new System.Drawing.Point(551, 90);
             lbl_ShowPillNumber.Margin = new System.Windows.Forms.Padding(4);
             lbl_ShowPillNumber.Name = "lbl_ShowPillNumber";
-            lbl_ShowPillNumber.Size = new System.Drawing.Size(93, 24);
+            lbl_ShowPillNumber.Size = new System.Drawing.Size(94, 26);
             lbl_ShowPillNumber.TabIndex = 12;
             lbl_ShowPillNumber.Text = "رقم الفاتورة";
             // 
             // btn_PrintPill
             // 
-            btn_PrintPill.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold);
+            btn_PrintPill.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             btn_PrintPill.Appearance.Options.UseFont = true;
             btn_PrintPill.Location = new System.Drawing.Point(476, 136);
             btn_PrintPill.Margin = new System.Windows.Forms.Padding(4);
@@ -201,7 +201,7 @@
             // 
             // btn_SaveBill
             // 
-            btn_SaveBill.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold);
+            btn_SaveBill.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             btn_SaveBill.Appearance.Options.UseFont = true;
             btn_SaveBill.Location = new System.Drawing.Point(775, 136);
             btn_SaveBill.Margin = new System.Windows.Forms.Padding(4);
@@ -230,7 +230,7 @@
             // 
             // simpleButton2
             // 
-            simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            simpleButton2.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             simpleButton2.Appearance.Options.UseFont = true;
             simpleButton2.Location = new System.Drawing.Point(98, 2);
             simpleButton2.Margin = new System.Windows.Forms.Padding(4);
@@ -266,39 +266,41 @@
             // 
             // labelControl10
             // 
-            labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl10.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl10.Appearance.Options.UseFont = true;
             labelControl10.Location = new System.Drawing.Point(213, 166);
             labelControl10.Margin = new System.Windows.Forms.Padding(4);
             labelControl10.Name = "labelControl10";
-            labelControl10.Size = new System.Drawing.Size(117, 24);
+            labelControl10.Size = new System.Drawing.Size(106, 26);
             labelControl10.TabIndex = 10;
             labelControl10.Text = "السعر النهائي";
             // 
             // labelControl9
             // 
-            labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl9.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl9.Appearance.Options.UseFont = true;
             labelControl9.Location = new System.Drawing.Point(270, 101);
             labelControl9.Margin = new System.Windows.Forms.Padding(4);
             labelControl9.Name = "labelControl9";
-            labelControl9.Size = new System.Drawing.Size(42, 24);
+            labelControl9.Size = new System.Drawing.Size(40, 26);
             labelControl9.TabIndex = 9;
             labelControl9.Text = "خصم";
             // 
             // labelControl7
             // 
-            labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl7.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl7.Appearance.Options.UseFont = true;
             labelControl7.Location = new System.Drawing.Point(257, 55);
             labelControl7.Margin = new System.Windows.Forms.Padding(4);
             labelControl7.Name = "labelControl7";
-            labelControl7.Size = new System.Drawing.Size(70, 24);
+            labelControl7.Size = new System.Drawing.Size(69, 26);
             labelControl7.TabIndex = 8;
             labelControl7.Text = "المجموع";
             // 
             // btn_DeletePillProduct
             // 
+            btn_DeletePillProduct.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            btn_DeletePillProduct.Appearance.Options.UseFont = true;
             btn_DeletePillProduct.Location = new System.Drawing.Point(67, 358);
             btn_DeletePillProduct.Margin = new System.Windows.Forms.Padding(4);
             btn_DeletePillProduct.Name = "btn_DeletePillProduct";
@@ -309,6 +311,8 @@
             // 
             // btn_EditPillProduct
             // 
+            btn_EditPillProduct.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            btn_EditPillProduct.Appearance.Options.UseFont = true;
             btn_EditPillProduct.Location = new System.Drawing.Point(220, 359);
             btn_EditPillProduct.Margin = new System.Windows.Forms.Padding(4);
             btn_EditPillProduct.Name = "btn_EditPillProduct";
@@ -341,12 +345,12 @@
             // 
             // sl_Customers
             // 
-            sl_Customers.Location = new System.Drawing.Point(-1, 75);
+            sl_Customers.Location = new System.Drawing.Point(6, 107);
             sl_Customers.Margin = new System.Windows.Forms.Padding(4);
             sl_Customers.Name = "sl_Customers";
             sl_Customers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             sl_Customers.Properties.PopupView = searchLookUpEdit1View;
-            sl_Customers.Size = new System.Drawing.Size(146, 22);
+            sl_Customers.Size = new System.Drawing.Size(174, 22);
             sl_Customers.TabIndex = 10;
             sl_Customers.EditValueChanged += sl_Customers_EditValueChanged;
             // 
@@ -362,16 +366,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold);
-            label1.Location = new System.Drawing.Point(117, -1);
+            label1.Font = new System.Drawing.Font("LBC", 11.999999F);
+            label1.Location = new System.Drawing.Point(71, 10);
             label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(177, 33);
+            label1.Size = new System.Drawing.Size(115, 26);
             label1.TabIndex = 0;
             label1.Text = "بيانات العميل";
             // 
             // btn_AddCutomer
             // 
+            btn_AddCutomer.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            btn_AddCutomer.Appearance.Options.UseFont = true;
             btn_AddCutomer.Location = new System.Drawing.Point(73, 337);
             btn_AddCutomer.Margin = new System.Windows.Forms.Padding(4);
             btn_AddCutomer.Name = "btn_AddCutomer";
@@ -382,34 +388,34 @@
             // 
             // labelControl3
             // 
-            labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl3.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl3.Appearance.Options.UseFont = true;
             labelControl3.Location = new System.Drawing.Point(209, 242);
             labelControl3.Margin = new System.Windows.Forms.Padding(4);
             labelControl3.Name = "labelControl3";
-            labelControl3.Size = new System.Drawing.Size(55, 24);
+            labelControl3.Size = new System.Drawing.Size(54, 26);
             labelControl3.TabIndex = 8;
             labelControl3.Text = "العنوان";
             // 
             // labelControl2
             // 
-            labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl2.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl2.Appearance.Options.UseFont = true;
             labelControl2.Location = new System.Drawing.Point(209, 194);
             labelControl2.Margin = new System.Windows.Forms.Padding(4);
             labelControl2.Name = "labelControl2";
-            labelControl2.Size = new System.Drawing.Size(52, 24);
+            labelControl2.Size = new System.Drawing.Size(51, 26);
             labelControl2.TabIndex = 7;
             labelControl2.Text = "الهاتف";
             // 
             // labelControl1
             // 
-            labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl1.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl1.Appearance.Options.UseFont = true;
             labelControl1.Location = new System.Drawing.Point(208, 140);
             labelControl1.Margin = new System.Windows.Forms.Padding(4);
             labelControl1.Name = "labelControl1";
-            labelControl1.Size = new System.Drawing.Size(51, 24);
+            labelControl1.Size = new System.Drawing.Size(45, 26);
             labelControl1.TabIndex = 6;
             labelControl1.Text = "الاسم";
             // 
@@ -449,12 +455,12 @@
             // 
             // simpleButton1
             // 
-            simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            simpleButton1.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             simpleButton1.Appearance.Options.UseFont = true;
-            simpleButton1.Location = new System.Drawing.Point(153, 71);
+            simpleButton1.Location = new System.Drawing.Point(103, 62);
             simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             simpleButton1.Name = "simpleButton1";
-            simpleButton1.Size = new System.Drawing.Size(127, 28);
+            simpleButton1.Size = new System.Drawing.Size(161, 37);
             simpleButton1.TabIndex = 1;
             simpleButton1.Text = "عميل موجود سابقا";
             // 
@@ -475,17 +481,18 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold);
+            label3.Font = new System.Drawing.Font("LBC", 11.999999F);
             label3.Location = new System.Drawing.Point(99, -3);
             label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(186, 33);
+            label3.Size = new System.Drawing.Size(124, 26);
             label3.TabIndex = 0;
             label3.Text = "بيانات الفاتورة";
             // 
             // gridControl1
             // 
             gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            gridControl1.Font = new System.Drawing.Font("LBC", 11.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             gridControl1.Location = new System.Drawing.Point(0, 34);
             gridControl1.MainView = gridView1;
             gridControl1.Margin = new System.Windows.Forms.Padding(4);
@@ -527,7 +534,7 @@
             // 
             // sl_Products
             // 
-            sl_Products.Location = new System.Drawing.Point(13, 67);
+            sl_Products.Location = new System.Drawing.Point(13, 77);
             sl_Products.Margin = new System.Windows.Forms.Padding(4);
             sl_Products.Name = "sl_Products";
             sl_Products.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
@@ -547,10 +554,12 @@
             // 
             // hl_DeleteProductData
             // 
+            hl_DeleteProductData.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            hl_DeleteProductData.Appearance.Options.UseFont = true;
             hl_DeleteProductData.Location = new System.Drawing.Point(161, 375);
             hl_DeleteProductData.Margin = new System.Windows.Forms.Padding(4);
             hl_DeleteProductData.Name = "hl_DeleteProductData";
-            hl_DeleteProductData.Size = new System.Drawing.Size(27, 16);
+            hl_DeleteProductData.Size = new System.Drawing.Size(40, 26);
             hl_DeleteProductData.TabIndex = 15;
             hl_DeleteProductData.Text = "حذف";
             hl_DeleteProductData.Click += hl_DeleteProductData_Click;
@@ -558,16 +567,18 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold);
-            label2.Location = new System.Drawing.Point(128, -1);
+            label2.Font = new System.Drawing.Font("LBC", 11.999999F);
+            label2.Location = new System.Drawing.Point(113, 10);
             label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(132, 33);
+            label2.Size = new System.Drawing.Size(85, 26);
             label2.TabIndex = 0;
             label2.Text = " المنتجات";
             // 
             // btn_AddProduct
             // 
+            btn_AddProduct.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            btn_AddProduct.Appearance.Options.UseFont = true;
             btn_AddProduct.Location = new System.Drawing.Point(83, 319);
             btn_AddProduct.Margin = new System.Windows.Forms.Padding(4);
             btn_AddProduct.Name = "btn_AddProduct";
@@ -578,6 +589,8 @@
             // 
             // btn_showtotalProductPrice
             // 
+            btn_showtotalProductPrice.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            btn_showtotalProductPrice.Appearance.Options.UseFont = true;
             btn_showtotalProductPrice.Location = new System.Drawing.Point(36, 260);
             btn_showtotalProductPrice.Margin = new System.Windows.Forms.Padding(4);
             btn_showtotalProductPrice.Name = "btn_showtotalProductPrice";
@@ -587,23 +600,23 @@
             // 
             // labelControl8
             // 
-            labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl8.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl8.Appearance.Options.UseFont = true;
             labelControl8.Location = new System.Drawing.Point(164, 270);
             labelControl8.Margin = new System.Windows.Forms.Padding(4);
             labelControl8.Name = "labelControl8";
-            labelControl8.Size = new System.Drawing.Size(163, 24);
+            labelControl8.Size = new System.Drawing.Size(146, 26);
             labelControl8.TabIndex = 12;
             labelControl8.Text = "اجمالي سعر المنتج";
             // 
             // labelControl6
             // 
-            labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl6.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl6.Appearance.Options.UseFont = true;
             labelControl6.Location = new System.Drawing.Point(223, 153);
             labelControl6.Margin = new System.Windows.Forms.Padding(4);
             labelControl6.Name = "labelControl6";
-            labelControl6.Size = new System.Drawing.Size(100, 24);
+            labelControl6.Size = new System.Drawing.Size(98, 26);
             labelControl6.TabIndex = 10;
             labelControl6.Text = "سعر القطعة";
             // 
@@ -617,23 +630,23 @@
             // 
             // labelControl5
             // 
-            labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl5.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl5.Appearance.Options.UseFont = true;
             labelControl5.Location = new System.Drawing.Point(203, 212);
             labelControl5.Margin = new System.Windows.Forms.Padding(4);
             labelControl5.Name = "labelControl5";
-            labelControl5.Size = new System.Drawing.Size(128, 24);
+            labelControl5.Size = new System.Drawing.Size(129, 26);
             labelControl5.TabIndex = 8;
             labelControl5.Text = "الكمية المطلوبة";
             // 
             // labelControl4
             // 
-            labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            labelControl4.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
             labelControl4.Appearance.Options.UseFont = true;
             labelControl4.Location = new System.Drawing.Point(223, 118);
             labelControl4.Margin = new System.Windows.Forms.Padding(4);
             labelControl4.Name = "labelControl4";
-            labelControl4.Size = new System.Drawing.Size(96, 24);
+            labelControl4.Size = new System.Drawing.Size(85, 26);
             labelControl4.TabIndex = 7;
             labelControl4.Text = "اسم المنتج";
             // 
@@ -656,10 +669,12 @@
             // 
             // simpleButton3
             // 
-            simpleButton3.Location = new System.Drawing.Point(209, 62);
+            simpleButton3.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            simpleButton3.Appearance.Options.UseFont = true;
+            simpleButton3.Location = new System.Drawing.Point(203, 48);
             simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             simpleButton3.Name = "simpleButton3";
-            simpleButton3.Size = new System.Drawing.Size(111, 28);
+            simpleButton3.Size = new System.Drawing.Size(125, 36);
             simpleButton3.TabIndex = 1;
             simpleButton3.Text = "اختيار المنتج";
             // 

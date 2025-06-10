@@ -25,6 +25,9 @@ namespace StockManagementSystem
                 // Bind data to control when loading complete
                 gridControl1.DataSource = dbContext.SupplierBills.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+
+            gridView1.OptionsView.ShowGroupPanel = false;
+
         }
     }
 }

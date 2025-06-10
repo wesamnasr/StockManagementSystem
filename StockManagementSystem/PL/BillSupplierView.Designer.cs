@@ -34,7 +34,6 @@
             supplierBillBindingSource = new System.Windows.Forms.BindingSource(components);
             gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ColSupplierBillID = new DevExpress.XtraGrid.Columns.GridColumn();
-            ColSupplierName = new DevExpress.XtraGrid.Columns.GridColumn();
             ColBilldate = new DevExpress.XtraGrid.Columns.GridColumn();
             ColTotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             ColPaidAmount = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -130,7 +129,7 @@
             gridView1.Appearance.VertLine.Options.UseFont = true;
             gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("LBC", 11.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             gridView1.Appearance.ViewCaption.Options.UseFont = true;
-            gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ColSupplierBillID, ColSupplierName, ColBilldate, ColTotalAmount, ColPaidAmount });
+            gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ColSupplierBillID, ColBilldate, ColTotalAmount, ColPaidAmount });
             gridView1.GridControl = gridControl1;
             gridView1.Name = "gridView1";
             gridView1.OptionsView.EnableAppearanceEvenRow = true;
@@ -149,16 +148,6 @@
             ColSupplierBillID.VisibleIndex = 0;
             ColSupplierBillID.Width = 139;
             // 
-            // ColSupplierName
-            // 
-            ColSupplierName.Caption = "اسم المورد";
-            ColSupplierName.FieldName = "Supplier.Name";
-            ColSupplierName.MinWidth = 25;
-            ColSupplierName.Name = "ColSupplierName";
-            ColSupplierName.Visible = true;
-            ColSupplierName.VisibleIndex = 1;
-            ColSupplierName.Width = 164;
-            // 
             // ColBilldate
             // 
             ColBilldate.Caption = "تاريخ الفاتورة";
@@ -166,7 +155,7 @@
             ColBilldate.MinWidth = 25;
             ColBilldate.Name = "ColBilldate";
             ColBilldate.Visible = true;
-            ColBilldate.VisibleIndex = 2;
+            ColBilldate.VisibleIndex = 1;
             ColBilldate.Width = 164;
             // 
             // ColTotalAmount
@@ -176,7 +165,7 @@
             ColTotalAmount.MinWidth = 25;
             ColTotalAmount.Name = "ColTotalAmount";
             ColTotalAmount.Visible = true;
-            ColTotalAmount.VisibleIndex = 3;
+            ColTotalAmount.VisibleIndex = 2;
             ColTotalAmount.Width = 164;
             // 
             // ColPaidAmount
@@ -186,7 +175,7 @@
             ColPaidAmount.MinWidth = 25;
             ColPaidAmount.Name = "ColPaidAmount";
             ColPaidAmount.Visible = true;
-            ColPaidAmount.VisibleIndex = 4;
+            ColPaidAmount.VisibleIndex = 3;
             ColPaidAmount.Width = 171;
             // 
             // supplierBindingSource
@@ -216,7 +205,6 @@
         private System.Windows.Forms.BindingSource supplierBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn ColSupplierBillID;
-        private DevExpress.XtraGrid.Columns.GridColumn ColSupplierName;
         private DevExpress.XtraGrid.Columns.GridColumn ColBilldate;
         private DevExpress.XtraGrid.Columns.GridColumn ColTotalAmount;
         private DevExpress.XtraGrid.Columns.GridColumn ColPaidAmount;

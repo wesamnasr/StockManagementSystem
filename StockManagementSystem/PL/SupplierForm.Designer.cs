@@ -32,8 +32,6 @@
             txtSearch = new System.Windows.Forms.TextBox();
             btnAddSupplier = new System.Windows.Forms.Button();
             dataGridView1 = new System.Windows.Forms.DataGridView();
-            supplierBindingSource = new System.Windows.Forms.BindingSource(components);
-            flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             supplierIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +42,8 @@
             duesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             colEdit = new System.Windows.Forms.DataGridViewButtonColumn();
+            supplierBindingSource = new System.Windows.Forms.BindingSource(components);
+            flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)supplierBindingSource).BeginInit();
             flowLayoutPanel1.SuspendLayout();
@@ -63,6 +63,7 @@
             // btnAddSupplier
             // 
             btnAddSupplier.BackColor = System.Drawing.Color.FromArgb(56, 184, 151);
+            btnAddSupplier.Font = new System.Drawing.Font("LBC", 11.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             btnAddSupplier.Location = new System.Drawing.Point(3, 4);
             btnAddSupplier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnAddSupplier.Name = "btnAddSupplier";
@@ -91,21 +92,6 @@
             dataGridView1.Size = new System.Drawing.Size(1031, 543);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // supplierBindingSource
-            // 
-            supplierBindingSource.DataSource = typeof(Models.Supplier);
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Controls.Add(btnAddSupplier);
-            flowLayoutPanel1.Controls.Add(txtSearch);
-            flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new System.Drawing.Size(1031, 57);
-            flowLayoutPanel1.TabIndex = 4;
             // 
             // supplierIDDataGridViewTextBoxColumn
             // 
@@ -178,6 +164,21 @@
             colEdit.Name = "colEdit";
             colEdit.Text = "تعديل";
             colEdit.UseColumnTextForButtonValue = true;
+            // 
+            // supplierBindingSource
+            // 
+            supplierBindingSource.DataSource = typeof(Models.Supplier);
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(btnAddSupplier);
+            flowLayoutPanel1.Controls.Add(txtSearch);
+            flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new System.Drawing.Size(1031, 57);
+            flowLayoutPanel1.TabIndex = 4;
             // 
             // SupplierForm
             // 

@@ -60,6 +60,7 @@
             // 
             // AddProductBtn
             // 
+            AddProductBtn.Font = new System.Drawing.Font("LBC", 11.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             AddProductBtn.Location = new System.Drawing.Point(3, 3);
             AddProductBtn.Name = "AddProductBtn";
             AddProductBtn.Size = new System.Drawing.Size(132, 46);
@@ -137,11 +138,10 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(970, 589);
             Controls.Add(ProductsTable);
             Controls.Add(flowLayoutPanel1);
             Name = "ProductsForm";
-            Text = "ProductsForm";
+            Size = new System.Drawing.Size(970, 589);
             Load += ProductsForm_Load;
             ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
             flowLayoutPanel1.ResumeLayout(false);

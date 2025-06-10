@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
+using StockManagementSystem.Models;
 
 namespace StockManagementSystem
 {
@@ -26,6 +27,32 @@ namespace StockManagementSystem
                 // Bind data to control when loading complete
                 gridControl1.DataSource = dbContext.CustomerBills.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
+            //AppDBContext context = new AppDBContext();
+
+
+            gridView1.OptionsView.ShowGroupPanel = false;
+
+          
         }
+
+        private void gridControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void BillsClientView_Load(object sender, EventArgs e)
+        {
+   
+            var dbContext = new StockManagementSystem.Models.AppDBContext();
+
+            await dbContext.CustomerBills
+                .Include(cb => cb.Customer)
+                .Include(cb => cb.Items)
+                .LoadAsync();
+
+            gridControl1.DataSource = dbContext.CustomerBills.Local.ToBindingList();
+      
+
     }
+}
 }

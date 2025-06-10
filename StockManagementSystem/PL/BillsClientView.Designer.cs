@@ -31,17 +31,16 @@
             components = new System.ComponentModel.Container();
             pn_cont = new System.Windows.Forms.Panel();
             gridControl1 = new DevExpress.XtraGrid.GridControl();
+            customerBillBindingSource = new System.Windows.Forms.BindingSource(components);
             gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ColCustomerBillID = new DevExpress.XtraGrid.Columns.GridColumn();
-            ColSupplierName = new DevExpress.XtraGrid.Columns.GridColumn();
             ColBilldate = new DevExpress.XtraGrid.Columns.GridColumn();
             ColTotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             ColPaidAmount = new DevExpress.XtraGrid.Columns.GridColumn();
-            customerBillBindingSource = new System.Windows.Forms.BindingSource(components);
             pn_cont.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridControl1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)customerBillBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
             SuspendLayout();
             // 
             // pn_cont
@@ -63,6 +62,11 @@
             gridControl1.Size = new System.Drawing.Size(952, 443);
             gridControl1.TabIndex = 1;
             gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
+            gridControl1.Load += gridControl1_Load;
+            // 
+            // customerBillBindingSource
+            // 
+            customerBillBindingSource.DataSource = typeof(Models.CustomerBill);
             // 
             // gridView1
             // 
@@ -124,7 +128,7 @@
             gridView1.Appearance.VertLine.Options.UseFont = true;
             gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("LBC", 11.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             gridView1.Appearance.ViewCaption.Options.UseFont = true;
-            gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ColCustomerBillID, ColSupplierName, ColBilldate, ColTotalAmount, ColPaidAmount });
+            gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ColCustomerBillID, ColBilldate, ColTotalAmount, ColPaidAmount });
             gridView1.GridControl = gridControl1;
             gridView1.Name = "gridView1";
             gridView1.OptionsView.EnableAppearanceEvenRow = true;
@@ -144,16 +148,6 @@
             ColCustomerBillID.VisibleIndex = 0;
             ColCustomerBillID.Width = 139;
             // 
-            // ColSupplierName
-            // 
-            ColSupplierName.Caption = "اسم العميل";
-            ColSupplierName.FieldName = "Customer.Name";
-            ColSupplierName.MinWidth = 25;
-            ColSupplierName.Name = "ColSupplierName";
-            ColSupplierName.Visible = true;
-            ColSupplierName.VisibleIndex = 1;
-            ColSupplierName.Width = 164;
-            // 
             // ColBilldate
             // 
             ColBilldate.Caption = "تاريخ الفاتورة";
@@ -161,7 +155,7 @@
             ColBilldate.MinWidth = 25;
             ColBilldate.Name = "ColBilldate";
             ColBilldate.Visible = true;
-            ColBilldate.VisibleIndex = 2;
+            ColBilldate.VisibleIndex = 1;
             ColBilldate.Width = 164;
             // 
             // ColTotalAmount
@@ -171,7 +165,7 @@
             ColTotalAmount.MinWidth = 25;
             ColTotalAmount.Name = "ColTotalAmount";
             ColTotalAmount.Visible = true;
-            ColTotalAmount.VisibleIndex = 3;
+            ColTotalAmount.VisibleIndex = 2;
             ColTotalAmount.Width = 164;
             // 
             // ColPaidAmount
@@ -181,12 +175,8 @@
             ColPaidAmount.MinWidth = 25;
             ColPaidAmount.Name = "ColPaidAmount";
             ColPaidAmount.Visible = true;
-            ColPaidAmount.VisibleIndex = 4;
+            ColPaidAmount.VisibleIndex = 3;
             ColPaidAmount.Width = 171;
-            // 
-            // customerBillBindingSource
-            // 
-            customerBillBindingSource.DataSource = typeof(Models.CustomerBill);
             // 
             // BillsClientView
             // 
@@ -198,10 +188,11 @@
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "BillsClientView";
             Text = "BillsClientView";
+            Load += BillsClientView_Load;
             pn_cont.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)gridControl1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)customerBillBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -211,7 +202,6 @@
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn ColCustomerBillID;
-        private DevExpress.XtraGrid.Columns.GridColumn ColSupplierName;
         private DevExpress.XtraGrid.Columns.GridColumn ColBilldate;
         private DevExpress.XtraGrid.Columns.GridColumn ColTotalAmount;
         private DevExpress.XtraGrid.Columns.GridColumn ColPaidAmount;

@@ -41,7 +41,7 @@
             // 
             // pn_cont
             // 
-            pn_cont.Anchor = System.Windows.Forms.AnchorStyles.None;
+            pn_cont.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             pn_cont.Controls.Add(confirm_btn);
             pn_cont.Controls.Add(confirmpass_txt);
             pn_cont.Controls.Add(newpass_txt);
@@ -131,9 +131,11 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(988, 636);
             Controls.Add(pn_cont);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "ChangePassword";
-            Size = new System.Drawing.Size(988, 636);
+            Text = "ChangePassword";
             pn_cont.ResumeLayout(false);
             pn_cont.PerformLayout();
             ResumeLayout(false);

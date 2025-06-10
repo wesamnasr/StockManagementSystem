@@ -76,12 +76,12 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Font = new System.Drawing.Font("LBC", 11.999999F);
-            dateTimePicker1.Location = new System.Drawing.Point(29, 165);
+            dateTimePicker1.Font = new System.Drawing.Font("LBC", 10.1999989F);
+            dateTimePicker1.Location = new System.Drawing.Point(77, 144);
             dateTimePicker1.MaxDate = new System.DateTime(2028, 12, 31, 0, 0, 0, 0);
             dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new System.Drawing.Size(237, 33);
+            dateTimePicker1.Size = new System.Drawing.Size(237, 29);
             dateTimePicker1.TabIndex = 1;
             // 
             // groupControl1
@@ -105,64 +105,64 @@
             // 
             // addnewbill
             // 
-            addnewbill.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            addnewbill.Appearance.Font = new System.Drawing.Font("LBC", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             addnewbill.Appearance.Options.UseFont = true;
-            addnewbill.Location = new System.Drawing.Point(5, 36);
+            addnewbill.Location = new System.Drawing.Point(5, 65);
             addnewbill.Name = "addnewbill";
-            addnewbill.Size = new System.Drawing.Size(166, 40);
+            addnewbill.Size = new System.Drawing.Size(134, 30);
             addnewbill.TabIndex = 4;
             addnewbill.Text = "اضافة فاتورة جديدة";
             addnewbill.Click += addnewbill_Click;
             // 
             // unit
             // 
-            unit.Location = new System.Drawing.Point(29, 290);
+            unit.Location = new System.Drawing.Point(78, 284);
             unit.Name = "unit";
-            unit.Properties.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            unit.Properties.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             unit.Properties.Appearance.Options.UseFont = true;
-            unit.Size = new System.Drawing.Size(236, 32);
+            unit.Size = new System.Drawing.Size(236, 28);
             unit.TabIndex = 9;
             // 
             // Total
             // 
-            Total.Location = new System.Drawing.Point(29, 226);
+            Total.Location = new System.Drawing.Point(78, 220);
             Total.Name = "Total";
-            Total.Properties.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            Total.Properties.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             Total.Properties.Appearance.Options.UseFont = true;
-            Total.Size = new System.Drawing.Size(236, 32);
+            Total.Size = new System.Drawing.Size(236, 28);
             Total.TabIndex = 8;
             // 
             // labelControl8
             // 
-            labelControl8.Appearance.Font = new System.Drawing.Font("LBC", 13.7999992F);
+            labelControl8.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             labelControl8.Appearance.Options.UseFont = true;
-            labelControl8.Location = new System.Drawing.Point(299, 287);
+            labelControl8.Location = new System.Drawing.Point(326, 285);
             labelControl8.Name = "labelControl8";
-            labelControl8.Size = new System.Drawing.Size(139, 30);
+            labelControl8.Size = new System.Drawing.Size(106, 22);
             labelControl8.TabIndex = 7;
             labelControl8.Text = "المبلغ المدفوع";
             // 
             // totalprice
             // 
-            totalprice.Appearance.Font = new System.Drawing.Font("LBC", 13.7999992F);
+            totalprice.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             totalprice.Appearance.Options.UseFont = true;
-            totalprice.Location = new System.Drawing.Point(291, 229);
+            totalprice.Location = new System.Drawing.Point(324, 224);
             totalprice.Name = "totalprice";
-            totalprice.Size = new System.Drawing.Size(144, 30);
+            totalprice.Size = new System.Drawing.Size(109, 22);
             totalprice.TabIndex = 6;
             totalprice.Text = "المبلغ المطلوب";
             // 
             // billID
             // 
-            billID.Location = new System.Drawing.Point(29, 105);
+            billID.Location = new System.Drawing.Point(145, 66);
             billID.Name = "billID";
             billID.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
-            billID.Properties.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            billID.Properties.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             billID.Properties.Appearance.Options.UseFont = true;
             billID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             billID.Properties.PopupView = gridView1;
             billID.Properties.UseReadOnlyAppearance = false;
-            billID.Size = new System.Drawing.Size(236, 32);
+            billID.Size = new System.Drawing.Size(200, 28);
             billID.TabIndex = 4;
             billID.EditValueChanged += billID_EditValueChanged;
             // 
@@ -178,20 +178,20 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("LBC", 13.7999992F);
-            label3.Location = new System.Drawing.Point(326, 164);
+            label3.Font = new System.Drawing.Font("LBC", 10.1999989F);
+            label3.Location = new System.Drawing.Point(347, 149);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(109, 30);
+            label3.Size = new System.Drawing.Size(85, 22);
             label3.TabIndex = 4;
             label3.Text = "تاريخ الشراء";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("LBC", 13.7999992F);
-            label1.Location = new System.Drawing.Point(315, 102);
+            label1.Font = new System.Drawing.Font("LBC", 10.1999989F);
+            label1.Location = new System.Drawing.Point(344, 66);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(120, 30);
+            label1.Size = new System.Drawing.Size(91, 22);
             label1.TabIndex = 2;
             label1.Text = "رقم الفاتورة";
             // 
@@ -220,18 +220,18 @@
             // 
             // simpleButton1
             // 
-            simpleButton1.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            simpleButton1.Appearance.Font = new System.Drawing.Font("LBC", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             simpleButton1.Appearance.Options.UseFont = true;
-            simpleButton1.Location = new System.Drawing.Point(5, 31);
+            simpleButton1.Location = new System.Drawing.Point(4, 47);
             simpleButton1.Name = "simpleButton1";
-            simpleButton1.Size = new System.Drawing.Size(153, 41);
+            simpleButton1.Size = new System.Drawing.Size(121, 31);
             simpleButton1.TabIndex = 14;
             simpleButton1.Text = "اضافة مورد جديد";
             // 
             // txtaddress
             // 
-            txtaddress.Font = new System.Drawing.Font("LBC", 11.999999F);
-            txtaddress.Location = new System.Drawing.Point(141, 353);
+            txtaddress.Font = new System.Drawing.Font("LBC", 10.1999989F);
+            txtaddress.Location = new System.Drawing.Point(141, 341);
             txtaddress.Multiline = true;
             txtaddress.Name = "txtaddress";
             txtaddress.Size = new System.Drawing.Size(167, 28);
@@ -239,23 +239,23 @@
             // 
             // labelControl6
             // 
-            labelControl6.Appearance.Font = new System.Drawing.Font("LBC", 13.7999992F);
+            labelControl6.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             labelControl6.Appearance.Options.UseFont = true;
-            labelControl6.Location = new System.Drawing.Point(337, 351);
+            labelControl6.Location = new System.Drawing.Point(344, 347);
             labelControl6.Name = "labelControl6";
-            labelControl6.Size = new System.Drawing.Size(121, 30);
+            labelControl6.Size = new System.Drawing.Size(91, 22);
             labelControl6.TabIndex = 12;
             labelControl6.Text = "عنوان الشركة";
             // 
             // searchId
             // 
-            searchId.Location = new System.Drawing.Point(141, 78);
+            searchId.Location = new System.Drawing.Point(141, 48);
             searchId.Name = "searchId";
-            searchId.Properties.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            searchId.Properties.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             searchId.Properties.Appearance.Options.UseFont = true;
             searchId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             searchId.Properties.PopupView = searchLookUpEdit1View;
-            searchId.Size = new System.Drawing.Size(166, 32);
+            searchId.Size = new System.Drawing.Size(166, 28);
             searchId.TabIndex = 11;
             searchId.EditValueChanged += searchId_EditValueChanged;
             // 
@@ -270,94 +270,93 @@
             // 
             // labelControl3
             // 
-            labelControl3.Appearance.Font = new System.Drawing.Font("LBC", 13.7999992F);
+            labelControl3.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             labelControl3.Appearance.Options.UseFont = true;
-            labelControl3.Location = new System.Drawing.Point(315, 293);
+            labelControl3.Location = new System.Drawing.Point(325, 280);
             labelControl3.Name = "labelControl3";
-            labelControl3.Size = new System.Drawing.Size(143, 30);
+            labelControl3.Size = new System.Drawing.Size(110, 22);
             labelControl3.TabIndex = 10;
             labelControl3.Text = "البريد الالكتروني";
             // 
             // txtEmail
             // 
-            txtEmail.Location = new System.Drawing.Point(141, 295);
+            txtEmail.Location = new System.Drawing.Point(141, 277);
             txtEmail.Name = "txtEmail";
-            txtEmail.Properties.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            txtEmail.Properties.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             txtEmail.Properties.Appearance.Options.UseFont = true;
-            txtEmail.Size = new System.Drawing.Size(166, 32);
+            txtEmail.Size = new System.Drawing.Size(166, 28);
             txtEmail.TabIndex = 9;
             // 
             // txtphone
             // 
-            txtphone.Location = new System.Drawing.Point(141, 241);
+            txtphone.Location = new System.Drawing.Point(141, 214);
             txtphone.Name = "txtphone";
-            txtphone.Properties.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            txtphone.Properties.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             txtphone.Properties.Appearance.Options.UseFont = true;
-            txtphone.Size = new System.Drawing.Size(166, 32);
+            txtphone.Size = new System.Drawing.Size(166, 28);
             txtphone.TabIndex = 8;
             // 
             // txtcompany
             // 
-            txtcompany.Location = new System.Drawing.Point(141, 186);
+            txtcompany.Location = new System.Drawing.Point(141, 161);
             txtcompany.Name = "txtcompany";
-            txtcompany.Properties.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            txtcompany.Properties.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             txtcompany.Properties.Appearance.Options.UseFont = true;
-            txtcompany.Size = new System.Drawing.Size(166, 32);
+            txtcompany.Size = new System.Drawing.Size(166, 28);
             txtcompany.TabIndex = 7;
             // 
             // txtname
             // 
-            txtname.Location = new System.Drawing.Point(142, 133);
+            txtname.Location = new System.Drawing.Point(141, 107);
             txtname.Name = "txtname";
-            txtname.Properties.Appearance.Font = new System.Drawing.Font("LBC", 11.999999F);
+            txtname.Properties.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             txtname.Properties.Appearance.Options.UseFont = true;
-            txtname.Size = new System.Drawing.Size(166, 32);
+            txtname.Size = new System.Drawing.Size(166, 28);
             txtname.TabIndex = 6;
             // 
             // labelControl5
             // 
-            labelControl5.Appearance.Font = new System.Drawing.Font("LBC", 13.7999992F);
+            labelControl5.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             labelControl5.Appearance.Options.UseFont = true;
-            labelControl5.Location = new System.Drawing.Point(350, 184);
+            labelControl5.Location = new System.Drawing.Point(354, 163);
             labelControl5.Name = "labelControl5";
-            labelControl5.Size = new System.Drawing.Size(108, 30);
+            labelControl5.Size = new System.Drawing.Size(81, 22);
             labelControl5.TabIndex = 4;
             labelControl5.Text = "اسم الشركة";
             // 
             // labelControl4
             // 
-            labelControl4.Appearance.Font = new System.Drawing.Font("LBC", 13.7999992F);
+            labelControl4.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             labelControl4.Appearance.Options.UseFont = true;
-            labelControl4.Location = new System.Drawing.Point(362, 239);
+            labelControl4.Location = new System.Drawing.Point(362, 223);
             labelControl4.Name = "labelControl4";
-            labelControl4.Size = new System.Drawing.Size(96, 30);
+            labelControl4.Size = new System.Drawing.Size(73, 22);
             labelControl4.TabIndex = 3;
             labelControl4.Text = "رقم الهاتف";
             // 
             // labelControl2
             // 
-            labelControl2.Appearance.Font = new System.Drawing.Font("LBC", 13.7999992F);
+            labelControl2.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             labelControl2.Appearance.Options.UseFont = true;
-            labelControl2.Location = new System.Drawing.Point(318, 131);
+            labelControl2.Location = new System.Drawing.Point(329, 108);
             labelControl2.Name = "labelControl2";
-            labelControl2.Size = new System.Drawing.Size(140, 30);
+            labelControl2.Size = new System.Drawing.Size(106, 22);
             labelControl2.TabIndex = 1;
             labelControl2.Text = "الاسم الشخصي";
             // 
             // labelControl1
             // 
-            labelControl1.Appearance.Font = new System.Drawing.Font("LBC", 13.7999992F);
+            labelControl1.Appearance.Font = new System.Drawing.Font("LBC", 10.1999989F);
             labelControl1.Appearance.Options.UseFont = true;
-            labelControl1.Location = new System.Drawing.Point(347, 76);
+            labelControl1.Location = new System.Drawing.Point(346, 51);
             labelControl1.Name = "labelControl1";
-            labelControl1.Size = new System.Drawing.Size(114, 30);
+            labelControl1.Size = new System.Drawing.Size(86, 22);
             labelControl1.TabIndex = 0;
             labelControl1.Text = "معرف المورد";
             // 
             // gridControlProducts
             // 
-            gridControlProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
-            gridControlProducts.Font = new System.Drawing.Font("LBC", 11.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            gridControlProducts.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             gridControlProducts.Location = new System.Drawing.Point(15, 414);
             gridControlProducts.MainView = gridViewProducts;
             gridControlProducts.Name = "gridControlProducts";

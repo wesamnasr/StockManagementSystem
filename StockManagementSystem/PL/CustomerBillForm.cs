@@ -370,11 +370,11 @@ namespace StockManagementSystem
                 decimal remainingAmount = totalAmount - paymentAmount;
                 // Update the remaining amount text box
                 tb_PillRemainingAmount.Text = remainingAmount.ToString("F2"); // Format to 2 decimal places
-                if (remainingAmount < 0)
-                {
-                    XtraMessageBox.Show("لا يمكن ادخال مبلغ اكبر من المطلوب.", "خطأ ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    tb_PillPaymentAmount.Focus();
-                }
+                //if (remainingAmount < 0)
+                //{
+                //    XtraMessageBox.Show("لا يمكن ادخال مبلغ اكبر من المطلوب.", "خطأ ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    tb_PillPaymentAmount.Focus();
+                //}
             }
             else
             {
@@ -405,11 +405,11 @@ namespace StockManagementSystem
                 XtraMessageBox.Show(".ادخل خصم مناسب", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (string.IsNullOrWhiteSpace(tb_TotalPillPrice.Text) || !decimal.TryParse(tb_TotalPillPrice.Text, out decimal totalAmount) || totalAmount < 0)
-            {
-                XtraMessageBox.Show(".احسب المجموع قبل الحفظ", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            //if (string.IsNullOrWhiteSpace(tb_TotalPillPrice.Text) || !decimal.TryParse(tb_TotalPillPrice.Text, out decimal totalAmount) || totalAmount < 0)
+            //{
+            //    XtraMessageBox.Show(".احسب المجموع قبل الحفظ", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
             if (string.IsNullOrWhiteSpace(tb_PillRemainingAmount.Text) || !decimal.TryParse(tb_PillRemainingAmount.Text, out decimal remainingAmount) || remainingAmount < 0)
             {
                 XtraMessageBox.Show(".احسب الكمية المتبقية قبل الحفظ", "خطأ في التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);

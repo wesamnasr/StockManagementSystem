@@ -18,46 +18,41 @@ namespace StockManagementSystem
         public FORM_Home()
         {
             InitializeComponent();
-            // TileControl setup
+
+            #region Initializing
             AppDBContext context = new AppDBContext();
-            //this.Size = new Size(1200, 720);
             TileControl tileControl = new TileControl();
             tileControl.Size = new Size(1000, 1000);
             tileControl.Location = new Point(10, 10);
-
             TileGroup group = new TileGroup();
+            #endregion
 
-            // Titles and their corresponding counts
+            #region generating data
             var tileData = new (string Title, int Count)[]
-            {
+           {
                 ("العملاء", context.Customers.Count()),
                 ("فواتير العملاء", context.CustomerBills.Count()),
                 ("الموردين", context.Suppliers.Count()),
                 ("المنتجات", context.Products.Count()),
                 ("فواتير الموردين", context.SupplierBills.Count())
-                //("المبيعات", context.Sales.Count())
-            };
+           };
+            #endregion
+
 
             foreach (var (title, count) in tileData)
             {
                 TileItem item = new TileItem();
 
-                // Set background and text color
                 item.AppearanceItem.Normal.BackColor = Color.DarkGray;
                 item.AppearanceItem.Normal.ForeColor = Color.White;
 
-                // Set border
                 item.AppearanceItem.Normal.BorderColor = Color.Black;
-                //item.AppearanceItem.Normal.BorderThickness = 2;
                 item.AppearanceItem.Normal.Options.UseBorderColor = true;
-                //item.AppearanceItem.Normal.Options.UseBorderThickness = true;
 
                 item.ItemSize = TileItemSize.Large;
 
-                // Clear existing elements just in case
                 item.Elements.Clear();
                 
-                // Add centered text
                 item.Elements.Add(new TileItemElement()
                 {
                     Text = $"{title}\n{count}",
@@ -77,7 +72,6 @@ namespace StockManagementSystem
 
             pn_stats.Controls.Add(tileControl);
 
-            // Finally, add the Panel to the Form
             this.Controls.Add(pn_stats);
 
 

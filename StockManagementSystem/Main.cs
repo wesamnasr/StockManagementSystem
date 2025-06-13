@@ -25,7 +25,7 @@ namespace StockManagementSystem
             homeControl.Dock = DockStyle.Fill; 
             pn_container.Controls.Add(homeControl.pn_stats);
         }
-        #region Drag
+        #region Drag Form
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
